@@ -1,0 +1,5 @@
+198.172
+
+dotNET = .net = ip address + network
+
+any OS + any Language + any Device 어느 환경에서도 가능하게 하자

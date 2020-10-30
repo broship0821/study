@@ -1,0 +1,82 @@
+oracle 11g 다운로드
+
+XE: SID이름(express edition): 무료판
+
+DBMS(DataBase Management System)
+	oracle, DB2(IBM), MSSqlServer(MS), mysql
+
+oracle 7	 7i	 8	 8i	 10g	11g	12c	18c
+	(i: internet)		(g:grid, 분산처리)	(c:cloud)
+
+
+다운로드 방법
+1. java.sun.com -> view all download
+
+(database 다운 메뉴에서)
+검색창에서 18c xe누른 후 아래로 가서 prior ... 를 누르면 보인다
+(or database 11g standard edition눌러 맨 아래 가면 있다)
+
+설치 방법
+- 비밀번호 어렵게, 까먹지 말기
+
+사용 방법
+- 윈도우 시작 -> 모든 프로그램 -> Oracle Database 11g Express Edition
+-> Run SQL Command Line을 실행해서 아래 그림과 같이 계정의 lock 해제 및 패스워드를 변경한다
+
+명령어
+conn / as sysdba  //연결
+
+select 'babo' from dual;
+select chr(7) from dual; //벨소리
+
+/*
+ascii code -> American Standard Code for Information Interchange -> 아스키 코드
+
+A를 치면 -> pulse(스파크일어남) -> flipflop(메모리로 들어감, 아스키 코드로) -> A를 그려서
+
+A 2진수로 0100 0001
+
+A: 65
+a: 97
+0: 48
+9: 57
+SP: 32 (띄어쓰기)
+BS: 8 (백스페이스)
+HT: 9 (tap)
+13: CR: carrige return 
+10: LF: line feed 줄바꿈
+BEL: 7 벨소리
+null -> 길이가 0인 문자열 ""
+
+chr(7)은 벨소리
+
+*/
+
+alter user hr identified by hr account unlock; //계정 풀기
+
+conn hr/hr //hr 계정으로 접속
+
+select * from departments;
+
+*** GUI 환경으로 로그인
+toad: 유료
+sqldeveloper: 무료
+
+*** sqldeveloper 다운 방법
+java.sun.com -> view all download
+developer tool에서 sql developer 선택
+중간에 있는 32/64 다운 (include jdk 말고)
+
+압축 풀기(d 드라이브)
+압축 푼 폴더에서 exe 파일 눌러 설치
+jdk 물어보면 browse 눌러 jdk 파일 위치 선택
+환경설정 import 나오면 아니요
+
+***jdk 다운로드(java developement kit)
+java.sun.com -> view all download
+jdk 8버전 다운로드
+
+(참고) C# : CLR(Common Language Runtime) (c#의 jdk)
+
+다운로드 위치:
+c:\Program Files \Java\jdk jre
