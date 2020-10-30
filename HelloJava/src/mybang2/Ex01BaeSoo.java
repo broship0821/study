@@ -57,7 +57,7 @@ public class Ex01BaeSoo {
 		 	여기서 엔터도 값으로 들어감
 		 
 		 nextInt() 메서드는 사용자 입력의 가장 마지막 개행문자를 제거하지 않음
-		 그래서 남은 엔터가 뒤에 nextLine으로 받을때 입력으로 처리되서 문제가 발생
+		 그래서 남은 엔터가 뒤에 nextLine()으로 받을때 입력으로 처리되서 문제가 발생
 		 그래서 Integer.parseInt(sc.next())써야됨
 		 */
 		
