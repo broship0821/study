@@ -1,0 +1,8 @@
+스키마 보여주면 테이블 만들기
+조건 보여주면 sql문 작성하기 (..보여주세요 - > select 수정하세요 -> update ..)
+
+create, select, insert, update, delete 작성법 숙지
+
+이클립스 설치 방법 --> 사이트 들어가서... (찾아 볼 수 있음)
+
+리눅스 압축, chmod 등 중요한거
