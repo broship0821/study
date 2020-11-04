@@ -1,4 +1,4 @@
-package mybang2;
+package ex00mybang2;
 
 import java.util.Scanner;
 
@@ -68,6 +68,8 @@ public class Ex01BaeSoo {
 		else if (i2 % 5 ==0)
 			System.out.println("¾ÆÇÏ");
 
+		
+		sc.close();
 	}
 
 }

@@ -1,6 +1,4 @@
-package mybang2;
-
-import java.util.Scanner;
+package ex00mybang2;
 
 public class Ex03 {
 

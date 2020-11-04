@@ -1,4 +1,4 @@
-package mybang2;
+package ex00mybang2;
 
 import java.util.Scanner;
 

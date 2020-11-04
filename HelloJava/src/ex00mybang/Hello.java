@@ -1,4 +1,4 @@
-package mybang;
+package ex00mybang;
 
 import java.util.Date;
 /*

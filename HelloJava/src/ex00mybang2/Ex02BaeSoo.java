@@ -1,4 +1,4 @@
-package mybang2;
+package ex00mybang2;
 
 import java.util.Scanner;
 
@@ -15,6 +15,8 @@ public class Ex02BaeSoo {
 		int num = Integer.parseInt(sc.next());
 		if(num>=50)
 			System.out.println("50º¸´Ù Ä¿");
+		
+		sc.close();
 	}
 
 }
