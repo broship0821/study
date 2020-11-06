@@ -143,6 +143,62 @@ public class ForEx {
 			System.out.println();
 		}
 		
+		
+		System.out.println("-----------------");
+		
+		/*
+		 ´ÙÀÌ¾Æ¸óµå ¸¸µé±â
+		 	ºóÄ­		º°
+		 	3		1
+		 	2		3
+		 	1		5
+		 	0		7
+		 	---------------------------
+		 	ºóÄ­		º°
+		 	1		5
+		 	2		3
+		 	3		1
+		 */
+		
+		for(int i=1;i<=7;i+=2) {
+			for(int j=i+1;j<=7;j+=2) { //1¾¿ ÁÙ¾îµë
+				System.out.print(" ");
+			}
+			for(int j=1;j<=i;j++) { //2¾¿ ´Ã¾î³²
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for(int i=1;i<=5;i+=2) {
+			for(int j=1;j<=i;j+=2) { //1¾¿ ´Ã¾î³²
+				System.out.print(" ");
+			}
+			for(int j=i;j<=5;j++) { //2¾¿ ÁÙ¾îµë
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 
