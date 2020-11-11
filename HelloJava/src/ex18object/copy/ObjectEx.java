@@ -16,6 +16,13 @@ public class ObjectEx {
 		 		}
 		 	2) 생성(제작)
 		 		Car mycar = new Car();
+		 		
+		 		
+		 접근지정자 access modifier
+		 private: 같은 클래스에서만 접근
+		 public: 외부 클래스에서도 접근 가능
+		 default: 같은 패키지에서
+		 protected: 상속에서만
 		 */
 
 	}

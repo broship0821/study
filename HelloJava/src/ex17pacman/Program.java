@@ -17,7 +17,14 @@ public class Program {
 		int max = 10;
 		
 		while(flag) {
+			//도전 횟수 모두 소진시 탈락
+			count++;
+			if(count==max+1) {
+				System.out.println("못 맞췄으!");
+				break;
+			}
 			
+			//______ 이거 출력
 			for (int i = 0; i < a.length; i++) {
 				System.out.print(a[i]);
 			}
@@ -26,19 +33,17 @@ public class Program {
 			
 			int x = 0;
 			System.out.println();
-			System.out.println(++count + "번째 시도");
+			System.out.println(count + "번째 시도"); //1번 시도마다 ++됨
 			System.out.print("예상글자입력: ");
 			q = sc.next();
+			//만약 맞췄으면 값 들어감
 			for (int i = 0; i < answer.length; i++) {
 				if(answer[i].equals(q)) {
 					a[i] = q;
 				}
 			}
 			
-			if(count==max) {
-				System.out.println("못 맞췄으!");
-				break;
-			}
+			//다 맞췄는지 확인
 			for (int i = 0; i < a.length; i++) {
 				
 				if(a[i].equals(answer[i])) {
@@ -51,7 +56,7 @@ public class Program {
 			
 			
 		}
-		if(count!=max) System.out.println("참 잘했어요!");
+		if(count!=max+1) System.out.println("참 잘했어요!");
 	}
 
 }
