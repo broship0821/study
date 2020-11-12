@@ -1,4 +1,4 @@
-package ex07_2046;
+package ex07_1307;
 
 import java.util.Scanner;
 
