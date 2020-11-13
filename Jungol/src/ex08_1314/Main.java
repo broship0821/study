@@ -10,6 +10,7 @@ public class Main {
 //		int n = sc.nextInt();
 		
 		/*
+		        이 4개 다 변수로 잡고 ++, --로 해보기
 		 		1 8  9 16
 		 		2 7 10 15
 		 		3 6 11 14
