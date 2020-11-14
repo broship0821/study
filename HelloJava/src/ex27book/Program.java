@@ -31,7 +31,7 @@ public class Program {
 		
 		for (int i = 0; i < books.length; i++) {
 			//indexOf 에서 없으면 >=0 이나 !=-1 로 물어봐도 됨
-			if(books[i].toLowerCase().indexOf(str.toLowerCase())>=0) {
+			if(books[i].toLowerCase().indexOf(str.toLowerCase())>=0) { //indexOf: 내가 찾는 단어가 있냐
 				System.out.println(books[i]);
 				count++;
 			}

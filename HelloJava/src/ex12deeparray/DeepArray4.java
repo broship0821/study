@@ -7,22 +7,26 @@ public class DeepArray4 {
 		int[][] arr = new int[5][5];
 		
 		int num = 1;
-		int count = 0;
-		for (int i = 0; i < 5; i++) { //i는 9
-			for(int j=0; j<count;j++) {
-				int tmp = count;
-				arr[j][tmp--] = num++;
+		for (int i = 0; i < 5; i++) {
+			int k = 0;
+			for(int j=i; j>=0;j--) {
+				arr[k++][j] = num++;
 				
 			}
-			if(i<5)
-				count++;
-			else
-				count--;
 		}
+		for(int i=1;i<=4;i++) {
+			int k = i;
+			for(int j=4;j>=i;j--) {
+				arr[k++][j] = num++; 
+			}
+		}
+		
+		
+		//-----------  출력   --------------------
 		
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print(arr[i][j] + " ");
+				System.out.printf("%2d ", arr[i][j]);
 			}
 			System.out.println();
 		}

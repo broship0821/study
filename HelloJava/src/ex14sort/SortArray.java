@@ -34,6 +34,24 @@ public class SortArray {
 		int[] k = {10, 90, 100, 60, 70, 23};
 		System.out.println(Arrays.toString(k));
 		int imsi;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 //		
 //		for (int i = 0; i < k.length-1; i++) {
 ////			int sw = 0;
