@@ -2,6 +2,7 @@ package ex35hashmap;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -38,13 +39,20 @@ public class HashMapEx {
 		}
 		
 		
+		
+		
 		Set<Map.Entry<Integer, String>> set3 = hm1.entrySet(); //map에 들어있는 내용을 처음부터 key,value로 종이박스(Map과 가장 비슷함)에 삽입
 		for(Map.Entry<Integer, String> k : set3) {
 			System.out.println(k.getKey()+ " : " + k.getValue());
 		}
 		
-		
-		
+		System.out.println("--------------");
+		//iterator 사용
+		System.out.println("hash-map-iterator");
+		Iterator it = hm1.values().iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 		
 		
 		
