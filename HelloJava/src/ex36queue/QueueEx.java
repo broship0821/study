@@ -8,7 +8,7 @@ public class QueueEx {
 
 	public static void main(String[] args) {
 		/*
-		 Queue (FIFO: First in Last out) 연속으로 무언가를 저장할때 사용
+		 Queue (FIFO: First in First out) 연속으로 무언가를 저장할때 사용
 		 
 		 collection 인터페이스
 		  --> Queue 인터페이스 --> 상속받아 만든 LinkedList 클래스
