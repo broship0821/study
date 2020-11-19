@@ -17,8 +17,8 @@ public class ImegeCopy {
 		FileOutputStream fos1 = null;
 		
 		if(args.length == 2) { //원본 파일명과 사본 파일명 합해서 2개 파일
-			fis1 = new FileInputStream(args[0]); //open
-			fos1 = new FileOutputStream(args[1], false); //open
+			fis1 = new FileInputStream(args[0]); //open 원본
+			fos1 = new FileOutputStream(args[1], false); //open 사본
 			//cp aa.jpg bb.jpg
 			
 			while((imsi=fis1.read())!=-1) { //read() : 괄호 안이 비어있으면 한 바이트 단위로 처리

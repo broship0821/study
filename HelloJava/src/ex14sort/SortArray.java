@@ -35,8 +35,16 @@ public class SortArray {
 		System.out.println(Arrays.toString(k));
 		int imsi;
 		
-		
-		
+		for(int i=0;i<k.length-1;i++) {
+			for(int j=0;j<k.length-1-i;j++) {
+				if(k[j]<k[j+1]) {
+					imsi = k[j];
+					k[j] = k[j+1];
+					k[j+1] = imsi;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(k));
 		
 		
 		

@@ -10,7 +10,6 @@ import java.util.Stack;
 public class Solution {
 	
 	public static int solution(int[][] board, int[] moves) {
-        int answer = 0;
         
         Queue<Integer> q1 = new LinkedList<Integer>();
         for(int i=0;i<5;i++) {
@@ -46,25 +45,27 @@ public class Solution {
         list.add(q5);
         
         Stack<Integer> s = new Stack<>();
-        int tmp = 0;
+        int count = 0;
         for(int i=0;i<moves.length;i++) {
-        	//null인지 체크, 직전꺼랑 비교해서 같으면 삭제
-        	int num = moves[i]-1;
-        	Integer x = (Integer)list.get(num).poll();
+        	Integer x = (Integer)list.get(moves[i]-1).poll();
         	if(x!=null) {
-        		
-        		s.add(x);
+        		if(!s.isEmpty()&&x==s.peek()) {
+        			s.pop();
+        			count+=2;
+        		}
+        		else
+        			s.add(x);
         	}
         }
         System.out.println(s);
         
-        return answer;
+        return count;
     }
 
 	public static void main(String[] args) {
 		int[][] board = {{0,0,0,0,0}, {0,0,1,0,3}, {0,2,5,0,1}, {4,2,4,4,2}, {3,5,1,3,1}};
 		int[] moves = {1,5,3,5,1,2,1,4};
-		solution(board, moves);
+		System.out.println(solution(board, moves));
 
 	}
 
