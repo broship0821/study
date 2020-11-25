@@ -60,7 +60,7 @@ public class Bb extends JFrame {
 		setContentPane(contentPane);
 		
 		textField = new JTextField();
-		textField.setText("id: "+id+"\npw: "+pw);
+		textField.setText("id: "+id+" pw: "+pw);
 		contentPane.add(textField, BorderLayout.CENTER);
 		textField.setColumns(10);
 	}
