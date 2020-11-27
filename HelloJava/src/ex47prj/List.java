@@ -49,10 +49,10 @@ public class List extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("게시판 목록");
-		lblNewLabel.setFont(new Font("굴림", Font.BOLD, 35));
-		lblNewLabel.setBounds(77, 44, 280, 63);
-		contentPane.add(lblNewLabel);
+		JLabel questionLabel = new JLabel("게시판 목록");
+		questionLabel.setFont(new Font("굴림", Font.BOLD, 35));
+		questionLabel.setBounds(77, 44, 280, 63);
+		contentPane.add(questionLabel);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(76, 119, 852, 412);

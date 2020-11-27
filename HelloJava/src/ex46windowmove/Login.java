@@ -45,13 +45,13 @@ public class Login extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("ID");
-		lblNewLabel.setBounds(44, 62, 62, 18);
-		contentPane.add(lblNewLabel);
+		JLabel questionLabel = new JLabel("ID");
+		questionLabel.setBounds(44, 62, 62, 18);
+		contentPane.add(questionLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setBounds(44, 102, 82, 18);
-		contentPane.add(lblNewLabel_1);
+		JLabel timerLabel = new JLabel("Password");
+		timerLabel.setBounds(44, 102, 82, 18);
+		contentPane.add(timerLabel);
 		
 		txtID = new JTextField();
 		txtID.setBounds(140, 59, 116, 24);
@@ -63,8 +63,8 @@ public class Login extends JFrame {
 		contentPane.add(txtPW);
 		txtPW.setColumns(10);
 		
-		JButton btnNewButton = new JButton("인자 갖고 가자");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton button00 = new JButton("인자 갖고 가자");
+		button00.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose(); //지금창 해제, 프레임을 닫는 것(메모리에서 해제)
@@ -76,8 +76,8 @@ public class Login extends JFrame {
 				//인자 갖고가는 효과 얻을 수 있음, 지금 없어서 오류남
 			}
 		});
-		btnNewButton.setBounds(44, 154, 239, 48);
-		contentPane.add(btnNewButton);
+		button00.setBounds(44, 154, 239, 48);
+		contentPane.add(button00);
 	}
 
 }

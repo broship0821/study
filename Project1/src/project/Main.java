@@ -1,6 +1,5 @@
 package project;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -44,23 +43,23 @@ public class Main extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("아재력 테스트");
-		lblNewLabel.setFont(new Font("굴림", Font.BOLD, 37));
-		lblNewLabel.setBounds(203, 159, 267, 72);
-		contentPane.add(lblNewLabel);
+		JLabel mainLabel = new JLabel("아재력 테스트");
+		mainLabel.setFont(new Font("굴림", Font.BOLD, 37));
+		mainLabel.setBounds(203, 159, 267, 72);
+		contentPane.add(mainLabel);
 		
-		JButton btnNewButton = new JButton("게임 시작!");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton startButton = new JButton("게임 시작!");
+		startButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				
+				setVisible(false);
 				dispose();
-				GameAction action = new GameAction(0);
+				new GameAction(0, 0);
 			}
 		});
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setBackground(Color.BLUE);
-		btnNewButton.setBounds(177, 287, 315, 72);
-		contentPane.add(btnNewButton);
+		startButton.setForeground(Color.BLACK);
+		startButton.setBackground(Color.BLUE);
+		startButton.setBounds(177, 287, 315, 72);
+		contentPane.add(startButton);
 	}
 }

@@ -44,7 +44,7 @@ public class HelloWB_JDBC extends JFrame {
 	private JTextField  textField;
 	private JTextField textField_1;
 	private JTextArea textArea1;
-	private  JButton btnNewButton;// 전역 
+	private  JButton button00;// 전역 
 	/**
 	 * Launch the application.
 	 */
@@ -72,9 +72,9 @@ public class HelloWB_JDBC extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("\uAC80\uC0C9\uD560\uC774\uB984");
-		lblNewLabel.setBounds(12, 10, 97, 15);
-		contentPane.add(lblNewLabel);
+		JLabel questionLabel = new JLabel("\uAC80\uC0C9\uD560\uC774\uB984");
+		questionLabel.setBounds(12, 10, 97, 15);
+		contentPane.add(questionLabel);
 		
 		textField = new JTextField();
 		textField.addKeyListener(new KeyAdapter() {
@@ -99,11 +99,11 @@ public class HelloWB_JDBC extends JFrame {
 		textField.setColumns(10);
 		
 		//JButton 
-		btnNewButton = new JButton("\uAC80\uC0C9");
-		btnNewButton.addActionListener(new ActionListener() {
+		button00 = new JButton("\uAC80\uC0C9");
+		button00.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//
-				if(e.getSource() == btnNewButton){ //버튼이 눌러졌으면(이벤트) 
+				if(e.getSource() == button00){ //버튼이 눌러졌으면(이벤트) 
 		     		try {
 						kaja();
 					} catch (ClassNotFoundException e1) {
@@ -181,9 +181,9 @@ public class HelloWB_JDBC extends JFrame {
 				
 			//}
 		});
-		btnNewButton.setBounds(360, 6, 97, 23);
-		btnNewButton.setBackground(Color.GREEN);
-		contentPane.add(btnNewButton);
+		button00.setBounds(360, 6, 97, 23);
+		button00.setBackground(Color.GREEN);
+		contentPane.add(button00);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(22, 35, 440, 330);

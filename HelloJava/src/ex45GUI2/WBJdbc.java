@@ -26,7 +26,7 @@ public class WBJdbc extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextArea textArea;
-	private JButton btnNewButton;
+	private JButton button00;
 
 	/**
 	 * Launch the application.
@@ -55,9 +55,9 @@ public class WBJdbc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("검색할이름");
-		lblNewLabel.setBounds(14, 12, 89, 18);
-		contentPane.add(lblNewLabel);
+		JLabel questionLabel = new JLabel("검색할이름");
+		questionLabel.setBounds(14, 12, 89, 18);
+		contentPane.add(questionLabel);
 		
 		textField = new JTextField();
 		textField.addKeyListener(new KeyAdapter() {
@@ -80,10 +80,10 @@ public class WBJdbc extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		btnNewButton = new JButton("검색");
-		btnNewButton.addActionListener(new ActionListener() {
+		button00 = new JButton("검색");
+		button00.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnNewButton) {//만약 이버튼이 눌러졌으면
+				if(e.getSource()==button00) {//만약 이버튼이 눌러졌으면
 					try {
 						kaja();
 					} catch (ClassNotFoundException e1) {
@@ -107,8 +107,8 @@ public class WBJdbc extends JFrame {
 		    	 
 		    }
 		});
-		btnNewButton.setBounds(313, 8, 105, 27);
-		contentPane.add(btnNewButton);
+		button00.setBounds(313, 8, 105, 27);
+		contentPane.add(button00);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(14, 42, 408, 351);

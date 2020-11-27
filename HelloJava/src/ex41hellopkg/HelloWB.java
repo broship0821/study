@@ -17,7 +17,7 @@ public class HelloWB extends JFrame {
 
 	private JPanel contentPane;
 	
-	JLabel lblNewLabel;
+	JLabel questionLabel;
 
 	/**
 	 * Launch the application.
@@ -51,7 +51,7 @@ public class HelloWB extends JFrame {
 		btnNooler.addActionListener(new ActionListener() { //Listener가 들어가면 이벤트 생성
 			public void actionPerformed(ActionEvent e) { //이벤트가 가동되면 이 안의 문장이 실행
 				//이벤트할 내용이 들어갈 자리
-				lblNewLabel.setText("안녕 방가방가");
+				questionLabel.setText("안녕 방가방가");
 			}
 		});
 		btnNooler.setBackground(Color.PINK);
@@ -59,10 +59,10 @@ public class HelloWB extends JFrame {
 		btnNooler.setBounds(90, 93, 176, 89);
 		contentPane.add(btnNooler);
 		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(Color.DARK_GRAY);
-		lblNewLabel.setFont(new Font("함초롬바탕", Font.BOLD, 15));
-		lblNewLabel.setBounds(117, 24, 113, 59);
-		contentPane.add(lblNewLabel);
+		questionLabel = new JLabel("");
+		questionLabel.setBackground(Color.DARK_GRAY);
+		questionLabel.setFont(new Font("함초롬바탕", Font.BOLD, 15));
+		questionLabel.setBounds(117, 24, 113, 59);
+		contentPane.add(questionLabel);
 	}
 }

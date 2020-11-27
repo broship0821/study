@@ -41,8 +41,8 @@ public class WindowMove extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("눌러봐");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton button00 = new JButton("눌러봐");
+		button00.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				dispose(); //지금창 해제, 프레임을 닫는 것(메모리에서 해제)
@@ -54,8 +54,8 @@ public class WindowMove extends JFrame {
 				//new 클래스이름().setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(128, 181, 105, 27);
-		contentPane.add(btnNewButton);
+		button00.setBounds(128, 181, 105, 27);
+		contentPane.add(button00);
 	}
 
 }

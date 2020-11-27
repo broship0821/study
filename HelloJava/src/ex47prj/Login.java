@@ -60,22 +60,22 @@ public class Login extends JFrame {
 		layeredPane.setBounds(293, 173, 399, 227);
 		contentPane.add(layeredPane);
 		
-		JButton btnNewButton = new JButton("로그인");
-		btnNewButton.setBounds(97, 159, 156, 26);
-		layeredPane.add(btnNewButton);
+		JButton button00 = new JButton("로그인");
+		button00.setBounds(97, 159, 156, 26);
+		layeredPane.add(button00);
 		
-		JLabel lblNewLabel = new JLabel("Simple 게시판");
-		lblNewLabel.setBounds(77, 26, 266, 55);
-		layeredPane.add(lblNewLabel);
-		lblNewLabel.setFont(new Font("굴림", Font.BOLD, 25));
+		JLabel questionLabel = new JLabel("Simple 게시판");
+		questionLabel.setBounds(77, 26, 266, 55);
+		layeredPane.add(questionLabel);
+		questionLabel.setFont(new Font("굴림", Font.BOLD, 25));
 		
-		JLabel lblNewLabel_1 = new JLabel("닉네임: ");
-		lblNewLabel_1.setBounds(77, 81, 55, 26);
-		layeredPane.add(lblNewLabel_1);
+		JLabel timerLabel = new JLabel("닉네임: ");
+		timerLabel.setBounds(77, 81, 55, 26);
+		layeredPane.add(timerLabel);
 		
-		JLabel lblNewLabel_2 = new JLabel("비밀번호: ");
-		lblNewLabel_2.setBounds(77, 114, 66, 18);
-		layeredPane.add(lblNewLabel_2);
+		JLabel questionLabel_2 = new JLabel("비밀번호: ");
+		questionLabel_2.setBounds(77, 114, 66, 18);
+		layeredPane.add(questionLabel_2);
 		
 		textField = new JTextField();
 		textField.setBounds(155, 82, 116, 24);

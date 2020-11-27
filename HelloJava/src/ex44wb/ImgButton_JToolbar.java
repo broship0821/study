@@ -31,7 +31,7 @@ color1.png를 넣고 text 부분의 new button 글자를 삭제한다
 4) 라벨을 하나 만들어 글자를 넣은 후
 첫번쨰 툴바의 버튼 - 마오 - add event handler - ...
 - mouse clicked .. 그리고 두번째 버튼 ~~~
-5) 코딩한 후 만일 액박에 러시 JLabel lblnewlabel~~~ 문장을
+5) 코딩한 후 만일 액박에 러시 JLabel questionLabel~~~ 문장을
 상단에 올려 전역으로 만들면 된다.
 */
 import java.awt.BorderLayout;
@@ -85,16 +85,16 @@ public class ImgButton_JToolbar extends JFrame {
 		toolBar.setBounds(38, 61, 536, 72);
 		contentPane.add(toolBar);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setToolTipText("민트색");
-		btnNewButton.addMouseListener(new MouseAdapter() {//addMouseListener -> 마우스 액션 등록 메소드, MouseAdapter -> 여러 마우스 액션 중 하나만 사용하게끔 도와줌
+		JButton button00 = new JButton("");
+		button00.setToolTipText("민트색");
+		button00.addMouseListener(new MouseAdapter() {//addMouseListener -> 마우스 액션 등록 메소드, MouseAdapter -> 여러 마우스 액션 중 하나만 사용하게끔 도와줌
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				label.setForeground(Color.CYAN);//마우스 클릭 이벤트 발생 시 라벨 색갈 변함
 			}
 		});
-		btnNewButton.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-paintbrush-3-48.png")));
-		toolBar.add(btnNewButton);
+		button00.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-paintbrush-3-48.png")));
+		toolBar.add(button00);
 		
 		JButton button = new JButton("");
 		button.setToolTipText("퍼런색");
@@ -107,40 +107,40 @@ public class ImgButton_JToolbar extends JFrame {
 		button.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-paintbrush-4-48.png")));
 		toolBar.add(button);
 		
-		JButton button_1 = new JButton("");
-		button_1.setToolTipText("대따커짐");
-		button_1.addMouseListener(new MouseAdapter() {
+		JButton button02 = new JButton("");
+		button02.setToolTipText("대따커짐");
+		button02.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				label.setFont(new Font("굴림", Font.BOLD, 35));
 			}
 		});
-		button_1.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-text-1-48.png")));
-		toolBar.add(button_1);
+		button02.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-text-1-48.png")));
+		toolBar.add(button02);
 		
-		JButton button_2 = new JButton("");
-		button_2.setToolTipText("원래대로");
-		button_2.addMouseListener(new MouseAdapter() {
+		JButton button03 = new JButton("");
+		button03.setToolTipText("원래대로");
+		button03.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				label.setFont(new Font("굴림", Font.PLAIN, 15));
 			}
 		});
-		button_2.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-text-1-48 (1).png")));
-		toolBar.add(button_2);
+		button03.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-text-1-48 (1).png")));
+		toolBar.add(button03);
 		
-		JButton button_3 = new JButton("");
-		button_3.setToolTipText("나가기");
-		button_3.addMouseListener(new MouseAdapter() {
+		JButton button04 = new JButton("");
+		button04.setToolTipText("나가기");
+		button04.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
 				System.exit(0);
 			}
 		});
-		button_3.setBounds(635, 64, 55, 55);
-		contentPane.add(button_3);
-		button_3.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-door-5-48.png")));
+		button04.setBounds(635, 64, 55, 55);
+		contentPane.add(button04);
+		button04.setIcon(new ImageIcon(ImgButton_JToolbar.class.getResource("/img/iconmonstr-door-5-48.png")));
 		
 		
 		label.setFont(new Font("굴림", Font.PLAIN, 20));
