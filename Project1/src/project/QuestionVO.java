@@ -1,5 +1,7 @@
 package project;
 
+import java.util.Arrays;
+
 public class QuestionVO {
 	private String question;
 	private String[] buttons;
@@ -28,6 +30,11 @@ public class QuestionVO {
 	}
 	public void setRightAnswer(String rightAnswer) {
 		this.rightAnswer = rightAnswer;
+	}
+	@Override
+	public String toString() {
+		return "QuestionVO [question=" + question + ", buttons=" + Arrays.toString(buttons) + ", rightAnswer="
+				+ rightAnswer + "]";
 	}
 	
 	

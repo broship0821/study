@@ -17,6 +17,8 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 import javax.swing.SwingConstants;
+import java.awt.SystemColor;
+import javax.swing.JLayeredPane;
 
 public class Game extends JFrame {
 
@@ -38,6 +40,7 @@ public class Game extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 750);
 		JPanel contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -49,16 +52,16 @@ public class Game extends JFrame {
 		//문제 들어갈 라벨
 		JLabel questionLabel = new JLabel(question);
 		questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		questionLabel.setFont(new Font("굴림", Font.PLAIN, 30));
+		questionLabel.setFont(new Font("휴먼편지체", Font.BOLD, 55));
 		questionLabel.setForeground(Color.BLACK);
-		questionLabel.setBackground(Color.BLACK);
-		questionLabel.setBounds(0, 51, 732, 63);
+		questionLabel.setBackground(Color.WHITE);
+		questionLabel.setBounds(0, 33, 732, 81);
 		contentPane.add(questionLabel);
 		//타이머 들어갈 라벨
 		JLabel timerLabel = new JLabel("시작!");
 		timerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		timerLabel.setFont(new Font("굴림", Font.PLAIN, 20));
-		timerLabel.setBounds(0, 112, 732, 50);
+		timerLabel.setFont(new Font("휴먼편지체", Font.BOLD, 30));
+		timerLabel.setBounds(0, 112, 732, 57);
 		contentPane.add(timerLabel);
 		//타이머
 		i = 10;//타이머 초기화
@@ -66,6 +69,8 @@ public class Game extends JFrame {
 		
 		//여기서부터 글자 버튼
 		JButton button00 = new JButton(buttons[0]);
+		button00.setBackground(new Color(210, 180, 140));
+		button00.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button00.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -73,10 +78,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button00.setBounds(112, 217, 70, 50);
+		button00.setBounds(133, 181, 90, 90);
 		contentPane.add(button00);
 		
 		JButton button01 = new JButton(buttons[1]);
+		button01.setBackground(new Color(210, 180, 140));
+		button01.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button01.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -84,10 +91,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button01.setBounds(207, 217, 70, 50);
+		button01.setBounds(250, 181, 90, 90);
 		contentPane.add(button01);
 		
 		JButton button02 = new JButton(buttons[2]);
+		button02.setBackground(new Color(210, 180, 140));
+		button02.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button02.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -95,10 +104,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button02.setBounds(304, 217, 70, 50);
+		button02.setBounds(366, 181, 90, 90);
 		contentPane.add(button02);
 		
 		JButton button03 = new JButton(buttons[3]);
+		button03.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
+		button03.setBackground(new Color(210, 180, 140));
 		button03.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -106,10 +117,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button03.setBounds(406, 217, 70, 50);
+		button03.setBounds(484, 181, 90, 90);
 		contentPane.add(button03);
 		
 		JButton button04 = new JButton(buttons[4]);
+		button04.setBackground(new Color(210, 180, 140));
+		button04.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button04.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -117,10 +130,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button04.setBounds(112, 287, 70, 50);
+		button04.setBounds(133, 283, 90, 90);
 		contentPane.add(button04);
 		
 		JButton button05 = new JButton(buttons[5]);
+		button05.setBackground(new Color(210, 180, 140));
+		button05.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button05.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -128,10 +143,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button05.setBounds(207, 287, 70, 50);
+		button05.setBounds(250, 283, 90, 90);
 		contentPane.add(button05);
 		
 		JButton button06 = new JButton(buttons[6]);
+		button06.setBackground(new Color(210, 180, 140));
+		button06.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button06.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -139,10 +156,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button06.setBounds(304, 287, 70, 50);
+		button06.setBounds(366, 283, 90, 90);
 		contentPane.add(button06);
 		
 		JButton button07 = new JButton(buttons[7]);
+		button07.setBackground(new Color(210, 180, 140));
+		button07.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button07.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -150,10 +169,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button07.setBounds(406, 287, 70, 50);
+		button07.setBounds(484, 283, 90, 90);
 		contentPane.add(button07);
 		
 		JButton button08 = new JButton(buttons[8]);
+		button08.setBackground(new Color(210, 180, 140));
+		button08.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button08.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -161,10 +182,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button08.setBounds(112, 357, 70, 50);
+		button08.setBounds(133, 385, 90, 90);
 		contentPane.add(button08);
 		
 		JButton button09 = new JButton(buttons[9]);
+		button09.setBackground(new Color(210, 180, 140));
+		button09.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button09.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -172,10 +195,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button09.setBounds(207, 357, 70, 50);
+		button09.setBounds(250, 385, 90, 90);
 		contentPane.add(button09);
 		
 		JButton button10 = new JButton(buttons[10]);
+		button10.setBackground(new Color(210, 180, 140));
+		button10.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
 		button10.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -183,10 +208,12 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button10.setBounds(304, 357, 70, 50);
+		button10.setBounds(366, 385, 90, 90);
 		contentPane.add(button10);
 		
 		JButton button11 = new JButton(buttons[11]);
+		button11.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
+		button11.setBackground(new Color(210, 180, 140));
 		button11.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -194,14 +221,16 @@ public class Game extends JFrame {
 				check(rightAnswer, idx, correctCount);
 			}
 		});
-		button11.setBounds(406, 357, 70, 50);
+		button11.setBounds(484, 385, 90, 90);
 		contentPane.add(button11);
 		//여기까지 글자 버튼
 		
 		//버튼 누를때 마다 들어가는 자리
 		answer = new JLabel(answerText.toString());
-		answer.setFont(new Font("굴림", Font.PLAIN, 30));
-		answer.setBounds(139, 463, 225, 81);
+		answer.setBackground(SystemColor.info);
+		answer.setHorizontalAlignment(SwingConstants.CENTER);
+		answer.setFont(new Font("휴먼편지체", Font.BOLD, 45));
+		answer.setBounds(133, 506, 445, 81);
 		contentPane.add(answer);
 		//엔터버튼
 //		JButton button00_1 = new JButton("엔터");
@@ -225,6 +254,8 @@ public class Game extends JFrame {
 		
 		//한글자 지우기 버튼
 		JButton deleteButton = new JButton("지우기");
+		deleteButton.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
+		deleteButton.setBackground(SystemColor.info);
 		deleteButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -234,10 +265,12 @@ public class Game extends JFrame {
 				}
 			}
 		});
-		deleteButton.setBounds(371, 474, 119, 27);
+		deleteButton.setBounds(133, 599, 207, 50);
 		contentPane.add(deleteButton);
 		//전체 지우기 버튼
 		JButton deleteAllButton = new JButton("전체 지우기");
+		deleteAllButton.setFont(new Font("휴먼엑스포", Font.PLAIN, 30));
+		deleteAllButton.setBackground(SystemColor.info);
 		deleteAllButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -245,7 +278,7 @@ public class Game extends JFrame {
 				answer.setText(answerText.toString());
 			}
 		});
-		deleteAllButton.setBounds(371, 524, 119, 27);
+		deleteAllButton.setBounds(366, 599, 208, 50);
 		contentPane.add(deleteAllButton);
 		
 	}
@@ -291,7 +324,7 @@ public class Game extends JFrame {
 	public void check(String rightAnswer, int idx, int correctCount) {
 		if(answer.getText().equals(rightAnswer)) {
 			timer.stop();
-			JOptionPane.showOptionDialog(answer, String.format("정답입니다!\n정답: %s", rightAnswer), 
+			JOptionPane.showOptionDialog(null, String.format("정답입니다!\n정답: %s", rightAnswer), 
 					"정답!", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, box, box[0]);
 			new GameAction(idx+1, correctCount+1);//정답일때 정답+1
 			setVisible(false);

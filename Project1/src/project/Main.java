@@ -11,6 +11,9 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.SystemColor;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 
 public class Main extends JFrame {
 
@@ -37,18 +40,21 @@ public class Main extends JFrame {
 	 */
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 700, 700);
+		setBounds(100, 100, 750, 750);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel mainLabel = new JLabel("아재력 테스트");
-		mainLabel.setFont(new Font("굴림", Font.BOLD, 37));
-		mainLabel.setBounds(203, 159, 267, 72);
+		JLabel mainLabel = new JLabel("\uC544\uC7AC\uAC1C\uADF8 \uD14C\uC2A4\uD2B8");
+		mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		mainLabel.setFont(new Font("휴먼편지체", Font.BOLD, 55));
+		mainLabel.setBounds(0, 33, 732, 72);
 		contentPane.add(mainLabel);
 		
-		JButton startButton = new JButton("게임 시작!");
+		JButton startButton = new JButton("Game Start!");
+		startButton.setFont(new Font("Bauhaus 93", Font.PLAIN, 30));
 		startButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -58,8 +64,13 @@ public class Main extends JFrame {
 			}
 		});
 		startButton.setForeground(Color.BLACK);
-		startButton.setBackground(Color.BLUE);
-		startButton.setBounds(177, 287, 315, 72);
+		startButton.setBackground(SystemColor.info);
+		startButton.setBounds(213, 602, 319, 72);
 		contentPane.add(startButton);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(Main.class.getResource("/img/smile.jpg")));
+		lblNewLabel.setBounds(158, 132, 425, 437);
+		contentPane.add(lblNewLabel);
 	}
 }
