@@ -232,25 +232,6 @@ public class Game extends JFrame {
 		answer.setFont(new Font("휴먼편지체", Font.BOLD, 45));
 		answer.setBounds(133, 506, 445, 81);
 		contentPane.add(answer);
-		//엔터버튼
-//		JButton button00_1 = new JButton("엔터");
-//		button00_1.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent arg0) {
-//				timer.stop(); //이 버튼 클릭 되면 타이머 멈춤
-//				if(answer.getText().equals(rightAnswer)) {
-//					JOptionPane.showOptionDialog(answer, String.format("정답입니다!\n정답: %s", rightAnswer), "정답!", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, box, box[0]);
-//					GameAction action = new GameAction(idx+1, correctCount+1);//정답일때 정답+1
-//				} else {
-//					JOptionPane.showOptionDialog(answer, String.format("오답입니다.\n정답: %s", rightAnswer), "땡!", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, box, box[0]);
-//					GameAction action = new GameAction(idx+1, correctCount);
-//				}
-//				setVisible(false);
-//				dispose();
-//			}
-//		});
-//		button00_1.setBounds(371, 513, 105, 27);
-//		contentPane.add(button00_1);
 		
 		//한글자 지우기 버튼
 		JButton deleteButton = new JButton("지우기");
@@ -280,6 +261,12 @@ public class Game extends JFrame {
 		});
 		deleteAllButton.setBounds(366, 599, 208, 50);
 		contentPane.add(deleteAllButton);
+		
+		JLabel lblNewLabel = new JLabel((idx+1) + "/10");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("휴먼편지체", Font.PLAIN, 20));
+		lblNewLabel.setBounds(665, 663, 67, 40);
+		contentPane.add(lblNewLabel);
 		
 	}
 	

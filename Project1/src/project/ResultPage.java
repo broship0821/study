@@ -73,7 +73,7 @@ public class ResultPage extends JFrame {
 		imgLabel.setBounds(208, 146, 312, 284);
 		contentPane.add(imgLabel);
 		
-		JButton backToMainButton = new JButton("메인으로");
+		JButton backToMainButton = new JButton("첫화면으로");
 		backToMainButton.setBackground(SystemColor.info);
 		backToMainButton.addMouseListener(new MouseAdapter() {
 			@Override

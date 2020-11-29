@@ -72,5 +72,21 @@ public class Main extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(Main.class.getResource("/img/smile.jpg")));
 		lblNewLabel.setBounds(158, 132, 425, 437);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("\uAD00\uB9AC\uC790\uD654\uBA74");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				new IdCheckPage().setVisible(true);
+				dispose();
+				setVisible(false);
+			}
+		});
+		btnNewButton.setBounds(627, 676, 105, 27);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\uD648\uC73C\uB85C");
+		btnNewButton_1.setBounds(0, 676, 105, 27);
+		contentPane.add(btnNewButton_1);
 	}
 }
