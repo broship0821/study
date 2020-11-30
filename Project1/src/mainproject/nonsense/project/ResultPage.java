@@ -1,4 +1,4 @@
-package project;
+package mainproject.nonsense.project;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

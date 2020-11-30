@@ -1,10 +1,10 @@
-package project;
+package mainproject.nonsense.project;
 
 import java.util.List;
 
 import javax.swing.JOptionPane;
 
-import project.util.DAO;
+import mainproject.nonsense.project.util.DAO;
 
 public class GameAction {
 	

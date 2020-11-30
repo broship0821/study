@@ -1,4 +1,4 @@
-package main;
+package mainproject.main;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import project.QuestionVO;
-import project.util.JDBCUtil;
+import mainproject.nonsense.project.QuestionVO;
+import mainproject.nonsense.project.util.JDBCUtil;
 
 public class UserDAO {
 	private Connection conn = null;

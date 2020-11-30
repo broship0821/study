@@ -1,4 +1,4 @@
-package project;
+package mainproject.nonsense.project;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -23,7 +23,7 @@ import java.awt.Color;
 import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 
-import project.util.DAO;
+import mainproject.nonsense.project.util.DAO;
 
 import javax.swing.ImageIcon;
 

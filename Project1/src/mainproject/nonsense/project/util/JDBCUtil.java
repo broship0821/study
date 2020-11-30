@@ -1,4 +1,4 @@
-package project.util;
+package mainproject.nonsense.project.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

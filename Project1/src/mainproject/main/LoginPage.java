@@ -1,4 +1,4 @@
-package main;
+package mainproject.main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -14,6 +14,9 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JPasswordField;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class LoginPage extends JFrame {
 
@@ -67,10 +70,18 @@ public class LoginPage extends JFrame {
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
-		JTextField passwordField = new JTextField();
+		JPasswordField passwordField = new JPasswordField();
+		passwordField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent arg0) {
+				if(arg0.getKeyCode()==KeyEvent.VK_ENTER)
+					clickLoginButton(idField.getText(), passwordField.getText());
+			}
+		});
 		passwordField.setColumns(10);
-		passwordField.setBounds(334, 252, 160, 29);
+		passwordField.setBounds(333, 253, 160, 29);
 		contentPane.add(passwordField);
+		
 		
 		JButton btnNewButton = new JButton("회원가입");
 		btnNewButton.addMouseListener(new MouseAdapter() {
@@ -88,24 +99,30 @@ public class LoginPage extends JFrame {
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				UserDAO dao = new UserDAO();
-				int check = dao.login(idField.getText(), passwordField.getText());
-				if(check == 1) { //로그인 성공
-					String name = dao.getName(idField.getText());
-					JOptionPane.showMessageDialog(null, name+"님 환영합니다!");
-					new MainPage().setVisible(true);
-					dispose();
-					setVisible(false);
-				} else if(check==0) {
-					JOptionPane.showMessageDialog(null, "해당 아이디는 없는 아이디입니다.");
-				} else if(check==-1) {
-					JOptionPane.showMessageDialog(null, "잘못된 비밀번호입니다.");
-				} else if(check==-2) {
-					JOptionPane.showMessageDialog(null, "다시 입력해주세요.");
-				}
+				clickLoginButton(idField.getText(), passwordField.getText());
 			}
 		});
 		button.setBounds(364, 313, 128, 50);
 		contentPane.add(button);
+		
+		
+	}
+	
+	private void clickLoginButton(String id, String password) {
+		UserDAO dao = new UserDAO();
+		int check = dao.login(id, password);
+		if(check == 1) { //로그인 성공
+			String name = dao.getName(id);
+			JOptionPane.showMessageDialog(null, name+"님 환영합니다!");
+			new MainPage().setVisible(true);
+			dispose();
+			setVisible(false);
+		} else if(check==0) {
+			JOptionPane.showMessageDialog(null, "해당 아이디는 없는 아이디입니다.");
+		} else if(check==-1) {
+			JOptionPane.showMessageDialog(null, "잘못된 비밀번호입니다.");
+		} else if(check==-2) {
+			JOptionPane.showMessageDialog(null, "다시 입력해주세요.");
+		}
 	}
 }

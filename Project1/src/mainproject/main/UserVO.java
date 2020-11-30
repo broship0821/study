@@ -1,4 +1,4 @@
-package main;
+package mainproject.main;
 
 public class UserVO {
 	private String id;

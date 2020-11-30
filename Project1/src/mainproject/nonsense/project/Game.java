@@ -1,4 +1,4 @@
-package project;
+package mainproject.nonsense.project;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -268,12 +268,26 @@ public class Game extends JFrame {
 		lblNewLabel.setBounds(665, 663, 67, 40);
 		contentPane.add(lblNewLabel);
 		
+		JButton btnNewButton = new JButton("메인으로");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				timer.stop();
+				setVisible(false);
+				dispose();
+				Main frame = new Main();
+				frame.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(0, 676, 105, 27);
+		contentPane.add(btnNewButton);
+		
 	}
 	
 	//메소드들------------------------------------
 	
 	//버튼 랜덤으로 출력되는 메소드
-	public void randomButtons(String[] buttons) {
+	private void randomButtons(String[] buttons) {
 		Arrays.sort(buttons, new Comparator<String>() {
 			@Override
 			public int compare(String o1, String o2) {
@@ -282,7 +296,7 @@ public class Game extends JFrame {
 		});
 	}
 	//타이머 시작 메소드
-	public void startTimer(JLabel timerLabel, String rightAnswer, int idx, int correctCount) {
+	private void startTimer(JLabel timerLabel, String rightAnswer, int idx, int correctCount) {
 		timer = new Timer(1000, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -303,12 +317,12 @@ public class Game extends JFrame {
         timer.start();
 	}
 	//버튼 클릭할때마다 글자 추가 되는 메소드
-	public void insertString(JButton button) {
+	private void insertString(JButton button) {
 		answerText.append(button.getText());
 		answer.setText(answerText.toString());
 	}
 	//쓴 답을 정답과 확인하는 메소드
-	public void check(String rightAnswer, int idx, int correctCount) {
+	private void check(String rightAnswer, int idx, int correctCount) {
 		if(answer.getText().equals(rightAnswer)) {
 			timer.stop();
 			JOptionPane.showOptionDialog(null, String.format("정답입니다!\n정답: %s", rightAnswer), 

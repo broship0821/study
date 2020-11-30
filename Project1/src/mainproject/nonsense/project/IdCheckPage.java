@@ -1,4 +1,4 @@
-package project;
+package mainproject.nonsense.project;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -15,9 +15,11 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import project.util.DAO;
+import mainproject.nonsense.project.util.DAO;
 
 import javax.swing.JPasswordField;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class IdCheckPage extends JFrame {
 
@@ -56,32 +58,43 @@ public class IdCheckPage extends JFrame {
 		idField.setColumns(10);
 		
 		passwordField = new JPasswordField();
+		passwordField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER)
+					clickLoginButton(idField.getText(), passwordField.getText());
+			}
+		});
 		passwordField.setBounds(203, 126, 116, 24);
 		contentPane.add(passwordField);
 		JButton btnNewButton = new JButton("로그인");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				DAO dao = new DAO();
-				int result = dao.checkAdminUser(idField.getText(), passwordField.getText());
-				switch(result) {
-				case 1: //로그인 성공
-					new AdminPage1().setVisible(true);
-					dispose();
-					setVisible(false);
-					break;
-				case 0:
-					JOptionPane.showMessageDialog(null, "해당 아이디는 없는 아이디입니다."); break;
-				case -1:
-					JOptionPane.showMessageDialog(null, "잘못된 비밀번호입니다."); break;
-				case -2:
-					JOptionPane.showMessageDialog(null, "잘못된 입력입니다."); break;
-				}
+				clickLoginButton(idField.getText(), passwordField.getText());
 			}
 		});
 		btnNewButton.setBounds(151, 178, 105, 27);
 		contentPane.add(btnNewButton);
 		
 		
+	}
+	
+	private void clickLoginButton(String id, String password) {
+		DAO dao = new DAO();
+		int result = dao.checkAdminUser(id, password);
+		switch(result) {
+		case 1: //로그인 성공
+			new AdminPage1().setVisible(true);
+			dispose();
+			setVisible(false);
+			break;
+		case 0:
+			JOptionPane.showMessageDialog(null, "해당 아이디는 없는 아이디입니다."); break;
+		case -1:
+			JOptionPane.showMessageDialog(null, "잘못된 비밀번호입니다."); break;
+		case -2:
+			JOptionPane.showMessageDialog(null, "잘못된 입력입니다."); break;
+		}
 	}
 }

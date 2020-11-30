@@ -1,19 +1,19 @@
-package main;
+package mainproject.main;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class SignUpPage extends JFrame {
 
@@ -77,12 +77,12 @@ public class SignUpPage extends JFrame {
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
-		JTextField passwordField = new JTextField();
+		JPasswordField passwordField = new JPasswordField();
 		passwordField.setColumns(10);
 		passwordField.setBounds(318, 301, 210, 36);
 		contentPane.add(passwordField);
 		
-		JTextField passwordField_2 = new JTextField();
+		JPasswordField passwordField_2 = new JPasswordField();
 		passwordField_2.setColumns(10);
 		passwordField_2.setBounds(318, 360, 210, 36);
 		contentPane.add(passwordField_2);
@@ -122,6 +122,18 @@ public class SignUpPage extends JFrame {
 		});
 		btnNewButton.setBounds(259, 488, 157, 36);
 		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("홈으로");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				new LoginPage().setVisible(true);
+				dispose();
+				setVisible(false);
+			}
+		});
+		btnNewButton_1.setBounds(259, 550, 157, 44);
+		contentPane.add(btnNewButton_1);
 		
 	}
 
