@@ -15,12 +15,7 @@ import java.awt.SystemColor;
 public class ResultPage extends JFrame {
 
 	private JPanel contentPane;
-
 	
-
-	/**
-	 * Create the frame.
-	 */
 	public ResultPage(int correctCount) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 750);

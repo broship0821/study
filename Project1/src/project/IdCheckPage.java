@@ -16,6 +16,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import project.util.DAO;
+
 import javax.swing.JPasswordField;
 
 public class IdCheckPage extends JFrame {
