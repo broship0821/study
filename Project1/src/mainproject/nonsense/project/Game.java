@@ -64,7 +64,7 @@ public class Game extends JFrame {
 		timerLabel.setBounds(0, 112, 732, 57);
 		contentPane.add(timerLabel);
 		//타이머
-		i = 10;//타이머 초기화
+		i = 30;//타이머 초기화
 		startTimer(timerLabel, rightAnswer, idx, correctCount);
 		
 		//여기서부터 글자 버튼
