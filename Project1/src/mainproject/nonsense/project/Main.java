@@ -39,6 +39,7 @@ public class Main extends JFrame {
 	 * Create the frame.
 	 */
 	public Main() {
+		setTitle("\uC544\uC7AC\uAC1C\uADF8test");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 750);
 		contentPane = new JPanel();
