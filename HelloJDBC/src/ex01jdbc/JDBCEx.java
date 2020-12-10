@@ -82,6 +82,32 @@ package ex01jdbc;
   "다이어그램인쇄"에서 선택하여 저장한다
     
     
+    ### JDBC(Java DataBase Connectivity)
+    
+    자바 + DB 연동
+    driver: 오라클 ojdbc14.jar(4버전)	ojdbc6.jar(6버전)
+    
+     [자바에서 JDBC드라이버 환경설정하기]
+  -.oraclexe안에 있는 ojdbc6.jar를
+  c:\Program...\Java\jdk...아래 jre\lib\ext에 넣는다
+  
+  -. 혹시 만일 이상하게 안돌아가면
+  c:\Program...\Java\jre..아래lib\ext에 넣는다
+  즉, jre\lib\ext방 2개에 모두 넣는다
+  
+  (참고) 프로젝트명-마오-properties-java build path - library탭에서 1.8.191 사용중인지 아니면 1.8.211 사용중인지를 파악할 수 있다(자바 버전 확인가능)
+    
+    -. [web(jsp)에서 JDBC드라이버 환경설정하기]
+		ㄴWEB-INF
+			ㄴLIB
+		안에 ojdbc6.jar를 넣어주면 된다
+	-. [spring에서 jdbc드라이버 환경설정하기]
+		ojdbc6.jar를 tomcat WAS에 넣는다
+		
+		-. 만일 연결중 다음에러 발생시
+		(에러) java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
+		(해결) pc적당한곳에 ojdbc6.jar 준비하고
+		프로젝트-마오-properties-java build path - library 탭에서 [add external jars] 클릭 후 준비한 ojdbc6.jar를 선택하여 -apply and close
  */
 public class JDBCEx {
 
