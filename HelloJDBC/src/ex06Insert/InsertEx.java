@@ -31,8 +31,8 @@ public class InsertEx {
 		pstmt.setString(3, tel);
 		pstmt.setString(4, date);
 		
-		int result = pstmt.executeUpdate();
-		if(result==1) System.out.println("입력 성공!");
+//		int result = pstmt.executeUpdate();
+//		if(result==1) System.out.println("입력 성공!");
 		
 		pstmt.close();
 		con1.close();

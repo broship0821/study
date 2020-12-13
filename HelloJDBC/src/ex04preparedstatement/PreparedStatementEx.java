@@ -29,16 +29,16 @@ public class PreparedStatementEx {
 				+ " WHERE first_name LIKE ?";
 		PreparedStatement pstmt = con1.prepareStatement(sql);
 //		pstmt.setString(1, name.toUpperCase());
-		pstmt.setString(1, "%"+s+"%");
+		pstmt.setString(1, "%"+s+"%"); 
 		ResultSet rs = pstmt.executeQuery();
 		
 		while(rs.next()) {
 			int id = rs.getInt("employee_id");
 			String first_name = rs.getString("first_name");
-			String hire_date = rs.getString("hire_date"); //날짜를 문자로 뽑아냄
+			String hire_date = rs.getString("hire_date"); //날짜를 문자로 뽑아냄 2006-03-23 00:00:00 이런형식
 			String hire_date2 = hire_date.substring(0,10); //거기서 년월일만 가져옴
 			//                행 가져오기
-			System.out.println(rs.getRow()+": "+id+" "+first_name+" "+hire_date2 );
+			System.out.println(rs.getRow()+": "+id+" "+first_name+" "+hire_date );
 		}
 		
 		rs.close();

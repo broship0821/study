@@ -26,4 +26,8 @@ public class TelinfoDAO {
 		if(conn!=null) conn.close();
 	}
 	
+	public boolean insert_nametel() {
+		
+	}
+	
 }

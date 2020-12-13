@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ex01스킬트리 {
+public class ex01스킬트리2 {
 	
 	public static int solution(String skill, String[] skill_trees) {
         int answer = skill_trees.length;
@@ -20,19 +20,16 @@ public class ex01스킬트리 {
         for (int i = 0; i < skill_trees.length; i++) {
         	Queue<Character> skillQueue = new LinkedList<>(Arrays.asList(c));
         	
-        	Queue<Character> skillTreeQueue = new LinkedList<>();
+        	
         	for(int j=0;j<skill_trees[i].length();j++) {
-        		skillTreeQueue.offer(skill_trees[i].charAt(j));
-        		if(skill.indexOf(skillTreeQueue.peek())!=-1) {
-        			if(skillTreeQueue.peek()==skillQueue.peek()) {
-        				skillTreeQueue.poll();
+        		Character tmp = skill_trees[i].charAt(j);
+        		if(skill.indexOf(tmp)!=-1) {
+        			if(tmp==skillQueue.peek()) {
         				skillQueue.poll();
         			} else {
         				answer--;
         				break;
         			}
-        		} else {
-        			skillTreeQueue.poll();
         		}
         	}
         	

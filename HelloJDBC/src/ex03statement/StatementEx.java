@@ -19,15 +19,17 @@ public class StatementEx {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		con1 = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
 		System.out.println("db 접속 성공!");
+		
+		
 		//con: 접속객체, st: 문장객체
-		String sql = "SELECT * FROM employees"
+		String sql = "SELECT * FROM employees";
 //				+ " where department_id=30";
 //				+ " where upper(first_name)='STEVEN'";
-				+ " where upper(first_name)='" + name.toUpperCase() + "'";
-		Statement st = con1.createStatement();
+//				+ " where upper(first_name)='" + name.toUpperCase() + "'";
+		Statement st = con1.createStatement();//문장객체: String -> sql에서 쓸수있는 언어? 로 바꿔줘요
 		//rs: 종이박스, select 내용들이 rs 종이박스에 들어감
 		ResultSet rs = st.executeQuery(sql);
-		
+//		rs.next(): 다음에 가르킬게 있으면 true, 그다음게 없으면 false
 		while(rs.next()) {
 			int id = rs.getInt("employee_id");
 			String first_name = rs.getString("first_name");
