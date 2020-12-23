@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class ex03프린터2 {
+public class ex02프린터2 {
 	
 	public static int solution(int[] priorities, int location) {
 		Map<Integer, Integer> printer = new HashMap<>();

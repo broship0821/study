@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ex03프린터 {
+public class ex02프린터 {
 	
 	public static int solution(int[] priorities, int location) {
 		Integer[] p = Arrays.stream(priorities).boxed().toArray(Integer[]::new);
