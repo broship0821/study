@@ -1,4 +1,4 @@
-package tcp;
+package ex01tcp;
 
 import java.io.DataInputStream;
 import java.io.IOException;
