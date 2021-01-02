@@ -1,34 +1,22 @@
-package ex09test;
+package ex06multiuser2;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class Server implements Runnable {
-	ArrayList<Socket> threadList = new ArrayList<>();
-	Socket socket;
-	DataOutputStream outputStream;
-	DataInputStream inputStream;
+class ThreadServerClass extends Thread {
+	private Socket socket;
+	private DataInputStream inputStream;
+	private DataOutputStream outputStream;
+	private ArrayList<ThreadServerClass> threadList;
 	
-	public Server(int port) throws IOException  {
-		Socket s = null;
-		ServerSocket ss = new ServerSocket(port);
-		System.out.println("서버 가동");
+	public ThreadServerClass(Socket s, ArrayList<ThreadServerClass> threadList) throws IOException {
+		socket = s;
 		inputStream = new DataInputStream(s.getInputStream());
 		outputStream = new DataOutputStream(s.getOutputStream());
-		
-		while(true) {
-			s = ss.accept();
-			System.out.println("접속주소: "+s.getInetAddress()+", 접속포트: "+s.getPort());
-			ThreadServerClass tServer = new ThreadServerClass(s);
-			tServer.start();
-			
-			threadList.add(s);
-			System.out.println("접속자 수: " + threadList.size());
-		}
+		this.threadList = threadList;
 	}
 	
 	public void sendChat(String chat) throws IOException {
@@ -47,10 +35,13 @@ public class Server implements Runnable {
 			}
 			while(inputStream != null) {
 				sendChat(inputStream.readUTF());
+				//클라이언트가 보낸 채팅 내용을 접속한 모두에게 보냄
 			}
-		} catch (IOException e) {
-//			e.printStackTrace();
-		} finally {
+			//while문 때문에 try문에서는 finally로 갈 일이 없음
+		} catch (IOException e) { //에러가 생겼을때 -> 유저가 나갔을때
+//			e.printStackTrace(); //주석시키면 에러메세지 안나옴
+		} finally {//try문에서는 절대 finally로 안넘어옴, catch문에서만 finally로 옴
+			//나간 쓰레드의 인덱스 찾기
 			for(int i=0;i<threadList.size();i++) {
 				if(socket.equals(threadList.get(i).socket)) {
 					threadList.remove(i);
@@ -63,22 +54,6 @@ public class Server implements Runnable {
 			}
 			System.out.println("접속자수: " + threadList.size() + " 명");
 		}
-	}
-	
-}
-
-class ThreadServerClass extends Thread { //내부 클래스
-	Socket socket;
-	
-	
-	public ThreadServerClass(Socket s) throws IOException {
-		socket = s;
-		
-	}
-	
-	@Override
-	public void run() {
-		
 	}
 	
 }
