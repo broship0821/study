@@ -1,0 +1,146 @@
+<!DOCTYPE html> <!-- 나 html5야 -->
+<html>
+<head>
+<meta charset="UTF-8"><!-- charset설정하는칸 -->
+<title>인서트 타이틀 히어</title>
+</head>
+<body bgcolor="black" text="gray">
+	<h1> Hello HTML </h1>
+이클립스 다운시 java ee 다운받음
+Enterprise Edition : 자바 작성 + 웹작성<br>
+html: 웹페이지를 작성하기 위한 언어로 Hyper Text Markup Language 팀 버너스리가 개발<br>
+markup: 태그를 사용한다
+<pre>안녕</pre>
+html버전: 1991년 html 시작으로 html 4.0, 4.01, 2000년 xhtml 1.0, 1.1, 2.0(사장됨)
+2012년 html 4.0에서 확장된 html5 대두, 최종버전 완성됨<br>
+html5: audio, video, 지도, websocket 엄청 편해짐<br>
+비디오와 오디오 심플하게 지원, css3지원, 위치정보(geolocation), local depository 지원(jQuery mobile 작성시 이것 사용)<br>
+html + css + javascripte + dom을 중심으로 함(MVC 모델)<br>
+참고: native app, web app
+<br>
+w3c: html표준을 관장하는 w3c(www 컨소시움) (http://www.w3.org)<br>
+web browser: html로 작성된 문서를 웹페이지로 출력하는 역할(IE(ms), chrome(google), FF(mozilla), safari, opera)
+<br>
+cross browsing: 5대 브라우저에 맞춰야됨, 영어 한국어 중국어 일어 등 맞춰야됨
+<br><br>
+
+웹 작동 원리<br>
+web client(브라우저) --[request]--> web server
+	 	  <--[response]-- .html로 보내줌
+클라이언트가 요청하지 않으면 응답도 X (그래서 만들어지 것이 websocket)
+
+WAS: Web Application Server 그냥 웹서버는 동적인 기능을 제공 못함, 동적인 기능을 가능하게 해줌
+
+### 아파치 톰캣 다운로드 및 압축풀기
+구글에서 톰캣 검색
+왼쪽메뉴에서 8.5 버전 클릭
+중간쯤 core에서 64-bit windows zip(pgp, sha512) 다운로드
+d드라이브에 압축 해제
+그럼 apache-tomcat-8.5.61 폴더가 만들어져 있다
+(필요시 8080 -> 8081등으로 변경)
+서버탭의 tomcat을 더블클릭
+http ... 8080 -> 8081로 변경(또는 server.xml에서 직접 변경해도 됨)
+http://url:port
+
+윈도우 서버 IIS 80 port가 기본
+톰캣 서버 8080이 기본
+
+바로 실행하려 하면 에러떨어짐, 8080포트를 오라클이 사용하고 있기 때문
+1. 오라클 포트를 변경함
+2. 톰캣 포트를 변경함
+2번이 쉬우므로 이 수업에는 톰캣 포트를 변경할 것임
+
+### 톰캣 사용및 문제점 해결하기
+1) 처음 작성은 Dynamic Web... - 프로젝트명 쓰고 - new runtime - 톰캣8.5설정 - browse -  톰캣의 bin방이 보이는 위치까지
+그 후 next 눌러서 web.xml 자동 설정
+
+나중에 서버 설정하는 방법
+
+2) server문제 발생시 새로 추가(필요시 서버 삭제는 윈도우 - preferences - server - runtime ... 에서 삭제 or 서버탭에서 그냥 삭제)
+이때 서버 탭에서 바로 지웠다면 다시 설정 시 configurure runtime environments에서 눌러 잡혀있는 톰캣을 선택 후 remove
+그런다음 서버 설정 후 바로 프로젝트명 - 마오 - build path - configure .. project facets - runtime 탭에서 - 톰캣 체크한 후 - apply and close
+
+(참고) 톰캣 만든 후 소스를 실행하지 말고 먼저 test 실행해봄
+서버탭에서 톰캣에 마우스 놓고 - 마오 - start 이떄 에러나면 고치고 에러 안나면 stop한후 이제 소스 실행
+
+실행 방법: html 파일 - 마오 - run as - run on server
+실행 후 url을 보면 http://localhost:8080/프로젝트명/hello.html
+<br><br><br>
+엔                                                    터: <br>
+xml 같은 경우는 무조건 /로 열었으면 닫아줘야됨, html은 그닥 상관 없음, xml은 문법이 까다로우나 조직적이고 구체적임, 환경 설정에 사용하기 좋음
+엔                                                    터: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;띄어쓰기
+<p>줄바꿈 두번 연속 하기</p>
+<p>줄바꿈 두번 연속 하기</p>
+
+<br><br><br>
+HTML 실행시키는 원리
+자바인 경우 jdk,jre를 통해 컴파일 후 .class를 만들고 메모리 load하여 실행
+번역기(컴파일러) 종류
+1. compiler 컴파일러: 미리 번역해서 기계어를 생성한 다음 실행 시 기계어만 가동
+2. interpreter 인터프리터: 미리 번역 X, 실행때마다 한줄한줄씩 번역
+인터프리터는 웹 브라우저에 들어있음
+
+<br><br><br>
+<h1>아하</h1>
+<font color="red" size="10">오늘 개춥다 :D @>>==--</font>
+가즈아<br>
+
+<br><br><br>
+빈칸&nbsp;&nbsp;&nbsp;&nbsp;활용하기<br>
+빈칸&nbsp; &nbsp; 활용하기
+<br><br><br>
+<b>글씨 굵게 하기 BOLD</b><br>
+그냥글씨<br>
+<i>itatlic</i><br>
+<blink>이전 IE에서 사용한 blink</blink><br>
+<strike>취소선</strike><br>
+<u>밑줄긋기</u><br>
+<code>안녕<sub>하세요</sub>배치기<sup>입니다</sup>북치기</code><br>
+y=X<sup>2</sup><br>
+y=log<sub>10</sub>x<br>
+
+
+<br><br><br>
+<h1><code>제목1</code></h1>
+<h1>제목1</h1>
+<h2>제목2</h2>
+<h3>제목3</h3>
+<h4>제목4</h4>
+<h5>제목5</h5>
+<h6>제목6</h6>
+
+p테그<p>
+br테그<br>
+p테그<p>
+br테그<br>
+
+<p align="center">안녕하세요<br>nihaoma</p>
+<p align="right">안녕하세요<br>nihaoma</p>
+<p align="left">안녕하세요<br>nihaoma</p>
+<p align="left">안녕하세요<br>nihaoma</p>
+
+<center>no pain<br> no gain<br></center>
+<center>no pain<br> no gain<br></center>
+
+<br><br><br>
+<pre><h1>no pain 
+no gain</h1>
+오우 여기서는 어떻게 써던 다 잘되네
+오오   오오                  오오
+</pre>
+
+<br><br><br>
+<marquee direction="left"><h1>자바에선 subString쓰고 쓰레드 사용해야되는데 이건 marquee</h1></marquee>
+<marquee behavior="alternate"><h1>behavior="alternate"는 왔다갔다</h1></marquee>
+<marquee direction="right" behavior="scroll"><h1>direction default는 left, behavior default는 scroll</h1></marquee>
+<marquee direction="right" behavior="slide"><h1>slide 이건 한번 가면 멈춤 ㅋㅋㅋ</h1></marquee>
+<marquee direction="right" scrollamount="20"><h1>나는야 스피드광!!!!!</h1></marquee>
+<marquee behavior="slide" loop="2" scrollamount="70"><h1>나는야 스피드광!!!!! 하지만 두번만 가고 말지</h1></marquee>
+<marquee width="800" height="200" bgcolor="pink" behavior="scroll" scrolldelay=1><h1>scrolldelay는 작을수록 빨라짐</h1></marquee>
+
+<br><br><br>
+<img src="img/aa.jpg" width="300" height="180">
+<img src="./img/bb.jpg" width="300" height="180"><br>
+</body>
+</html>
