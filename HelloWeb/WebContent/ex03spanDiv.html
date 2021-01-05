@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//객체.속성 = 값 -> 객체.이벤트=이벤트 처리 함수
+	document.onmousemove=function(){
+		//그림좌표(100,50) <- 마우스좌표(100,50)
+		document.getElementById("f1").style.left=(event.clientX-10)+"px" //px입력
+		document.getElementById("f1").style.top=(event.clientY-10)+"px"
+	}
+	/*
+	마우스 움직이는 이벤트가 발생할 때마다
+	id가 f1인 그룹의 왼쪽 좌표를 이벤트가 발생한 X좌표로 변경
+	id가 f1인 그룹의 위쪽 좌표를 이벤트가 발생한 Y좌표로 변경
+	
+	dom: Document Object Model 모든 테그에 접근할 수 있게 해줌
+	*/
+	
+	/*
+	document.all.f1.style.top=event.clientY+"px";
+	이건 IE 스타일
+	IE: document.all.f1
+	*/
+</script>
+</head>
+<body>
+<span id="f1" style="position:absolute;">
+	<img src="img/ball.jpg" border="0" name="image" />
+</span>
+</body>
+</html>

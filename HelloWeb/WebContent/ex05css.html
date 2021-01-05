@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<style>
+	body{ /*테그명은 아무것도 없이*/
+		background-color: #ffff00;
+	} /* rgb컬러: 빛의 3원색 0-255(00-ff) #0000ff: blue */
+	.a1{ /* . 은 class*/
+		color: violet;
+	}
+	.a5{
+		color: rgba(255,255,0,0.5);
+		/*rgba의 a(alpha)는 투명도, 0.0~1.0(투명~불투명)*/
+		/*0.0 fully transparent and 1.0 fully opaque*/
+	}
+	#a7{/*#은 id*/
+		color: blue;
+		font-size: 50px;
+	}
+	/*
+	rgb: red green blue 빛
+	#ffff00 두개씩 나눔
+	rgba(255,255,0,0.5) ,로 나눔
+	blue 이렇게 바로 해도 됨
+	*/
+</style>
+
+<body>
+
+<div class="a1">클래스1</div>
+<div class="a5">클래스2</div>
+<div id="a7">아이디1</div>
+
+</body>
+</html>

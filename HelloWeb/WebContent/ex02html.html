@@ -1,0 +1,126 @@
+<!DOCTYPE html> <!-- 나 html5야 -->
+<html>
+<head>
+<meta charset="UTF-8"><!-- charset설정하는칸 -->
+<title>인서트 타이틀 히어</title>
+</head>
+<body bgcolor="black" text="gray">
+<br><br><br>
+<table border="0"><!-- border: 선생김 -->
+	<tr>
+		<td><img src="img/aa.jpg" width="300"></td>
+		<td><img src="./img/bb.jpg" width="300"></td>
+	</tr>
+	<tr align="center">
+		<td><h2>햄버거</h2></td>
+		<td><h2>샌드위치</h2></td>
+	</tr>
+</table>
+
+<p><h2><a href="index.html">처음으로</a></h2></p>
+<a href="https://www.naver.com">네이버</a>
+
+<br><br><br>
+html, xml(pom.xml) 태그 도우미 emmet 플러그인
+emmet : 거의 만능 태그 도우미
+help - eclipse marketplace - 
+find에 emmet 입력 후 install - 
+설치 도중 경고뜨면 무시하고 첫번째 install anyway 클릭
+
+marketplace 안되면 help - install new software로 들어가서 
+http://emmet.io/eclipse/updates 주소를 url로 설정
+
+
+<br><br><br>
+div*5 치고 ctrl + e(tab도 가능)
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+emmet 사용법
+1. h1 치고 ctrl e 하면 바로 생성됨
+<h1></h1>
+
+2. div>ul>li 하고 ctrl e 하면 하위코드 생성
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+form>table>tr>td
+<form action="">
+	<table>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+</form>
+
+3. div>ul*2>li*3
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+4. input:text
+<input type="text" name="" id="" />
+
+5. input:submit[value="서버로 이동"]
+<input type="submit" value="서버로 이동" />
+
+6. div#myId
+<div id="myId"></div>
+
+7. div.myClass
+<div class="myClass"></div>
+
+8. ul>li.myClass*3
+<ul>
+	<li class="myClass"></li>
+	<li class="myClass"></li>
+	<li class="myClass"></li>
+</ul>
+
+9. div#myId+div.myClass
+<div id="myId"></div>
+<div class="myClass"></div>
+
+xml에서--------------------
+1. bean
+<bean></bean>
+
+2. dependency>(groupdId+artifactId+version)
+<dependency>
+	<groupid></groupid>
+	<artifactid></artifactid>
+	<version></version>
+</dependency>
+
+--------------------------------------------
+<br><br><br><br><br><br>
+
+div vs span
+그룹테그
+span은 inline 테그(줄바꿈 없음)
+div 는 block 테그(줄바꿈 있음)
+둘이 그냥 줄바꿈 차이
+나중에 css,자바스크립트 적용할때 그룹으로 정해주면 편함
+<br><br><br>
+<span>스펜1</span><!-- br태그를 사용하여 줄바꿈, 그룹을 구성, inline -->
+<span>스펜2</span><br>
+<span>스펜3</span>
+<div>디브1</div><!-- block -->
+<div>디브2</div>
+
+</body>
+</html>

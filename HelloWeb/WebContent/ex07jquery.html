@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.1.1.js"></script>
+<!-- jQuery: 자바스크립트 프레임워크 -->
+
+<!-- <script>
+	window.onload=function(){
+		document.getElementById('img1').style.height='1000px';
+	}
+</script> -->
+
+<script> //jQuery 사용시
+	$(function(){
+		$('img#img1').attr('height',1000)
+		//img테그중 id가img1인걸 attribute의 height를 1000으로 설정해라
+	})
+</script>
+
+</head>
+<body>
+	<img src="./img/menu1.jpg" width="200" id=img1 />
+	<img src="img/menu2.jpg" width="200" />
+</body>
+</html>

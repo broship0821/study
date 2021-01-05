@@ -11,18 +11,24 @@ public class Recur3 {
 			System.out.println(n);
 		}
 	}
-	
-	static void recur2(int n) {
-		IntStack s = new IntStack(4);
+	// 메소드 recur의 비재귀적 구현
+	static void recur3(int n) {
+		int[] nstk = new int[100];
+		int[] sstk = new int[100];
+		int ptr = -1;
+		int sw = 0;
+		
 		while(true) {
-			s.push(n);
+			if(n>0) {
+				ptr++;
+			}
 		}
 	}
 
 	public static void main(String[] args) {
 		recur(4);
 		System.out.println("------");
-		recur2(4);
+		recur3(4);
 	}
 
 }
