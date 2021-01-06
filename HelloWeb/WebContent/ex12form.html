@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+서버로 갈때는 
+http://www.naver.com
+http : hypertext transfer protocol
+
+<form action="hello.jsp" method="get">
+서버에 있는 hello.jsp를 찾아감, 기본이 get방식
+action : 서버의 누구 찾아가??? .jsp servlet(.java)
+method : 전송방식(get(기본), post)
+
+get: head,body로 처리 그중 head: 이름, 전화번호가 노출됨, 
+작은용량, 길이가 고정(128byte~2k), 속도가 up
+ex) http://....?name=peter&tel=01012341234
+
+post: body처리: 노출안됨, 큰용량, 길이는 당연히 유동
+속도가 상대적 느림
+</form>
+
+<!-- <form action="ex12hello.jsp" method="post"> -->
+<form action="ex12hello.jsp" method="get">
+이름: <input type="text" name="name" autofocus="autofocus" required="required" placeholder="홍길동" /><br>
+전화번호: <input type="text" name="tel" value="010-1234-1234" required="required" /><br>
+이메일: <input type="email" name="email" required="required" placeholder="aa@aa.com"><br>
+생일: <input type="date" name="date" required="required" ><br>
+<input type="submit" value="서버로가자" /><br>
+<input type="reset" value="초기화" /><br>
+</form>
+<!-- autofocus: 시작하자마자 커서가 여기 와있음
+required 무조건 입력해야됨
+placeholder 샘플값
+ -->
+1. html5 특성을 활용한다 다음 예제를 봅시다
+2. 
+<input type="button" value="서버로이동" onclick="go();">
+
+
+compiler vs interpreter
+
+client side   vs   server side
+개발자가 개발		      개발자가 개발
+실행시 클라이언트가감         안감
+클라이언트 제어하에 실행  서버제어하에 실행됨
+
+장점: 서버의 overhead X   보안이 높음(클라이언트는 소스x)
+단점: 보안점측면(페이지소스보기)   과부하
+html css js              jsp servlet
+
+
+</body>
+</html>

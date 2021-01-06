@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black" text="yellow">
+<table border="1" width="300" height="200">
+	<tr align="center">
+		<th>이름</th><!-- 제목같은 느낌, 글씨가 두꺼워짐 -->
+		<th>나이</th>
+	</tr>
+	<tr align="center">
+		<td>홍길동</td>
+		<td>27</td>
+	</tr>
+	<tr align="center">
+		<td>이도령</td>
+		<td>21</td>
+	</tr>
+	<tr align="center">
+		<td colspan="2">후보 선수 2명</td><!-- 칼럼 2개를 잡아먹는다 -->
+	</tr>
+</table>
+
+<ul>
+	<li>nothing</li>
+	<li><a href="https://www.naver.com">네이버<img src="img/aa.jpg"></a></li>
+	<li><a href="#">맨위로<img src="img/bb.jpg"></a></li>
+	<li><a href="#come">저기로<img src="img/menu2.jpg"></a></li>
+</ul>
+
+
+
+<!-- 
+그림 처리하는 방법
+table > float left(그림은 왼쪽, 글씨가 오른쪽으로 붙음), float right(글씨가 왼쪽으로 붙음) > flex
+
+border padding margin
+
+border는 테두리 크기
+padding은 글씨와 테두리와의 간격
+margin은 두 테이블 사이의 간격(둘다 겉의 테두리)
+
+padding:20px (상우하좌 4개 모두 20px)
+padding:20px 30px (상 우) (상하 20 좌우 30)
+padding:20px 30px 50px 70px (상 우 하 좌)
+padding:20px 30px 50px (상 우 하) 좌는 우처럼 30px
+ -->
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <a href="#"><img src="img/menu1.jpg">화면 맨위로</a>
+ <hr>
+ <a name="come">여기로</a>
+ <hr>
+ 
+ <table border="2">
+ 	<caption align="bottom">테이블 2.3 이런식으로 표현하는 방법 caption</caption>
+ 	<tr>
+ 		<td rowspan="3" bgcolor="orange">울반 명단</td>
+ 		<td>손흥민</td>
+ 		<td>29</td>
+ 	</tr>
+ 	<tr>
+ 		<td>메시</td>
+ 		<td>33</td>
+ 	</tr>
+ 	<tr>
+ 		<td>호날두</td>
+ 		<td>35</td>
+ 	</tr>
+ 	<tr>
+ 		<td colspan="3">총 3명!</td>
+ 	</tr>
+ </table>
+ 우랑루아루아루알우라우라
+</body>
+</html>
