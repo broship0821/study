@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black" text="gray">
+<form action="ex12hello.jsp" method="get">
+	이름: <input type="text" name="name" /><br><br>
+	전화번호: <input type="text" name="tel" /><br><br>
+	<input type="hidden" name="hiddenData" value="something" />
+	<input type="submit" value="서버로이동" />
+</form>
+<!-- hidden은 화면에는 안보이게 데이터를 서버로 보낼 수 있다
+개발 시 다른 페이지로 갈때 값을 계속 넘겨주어야 할때 사용
+ex) 처음에 로그인하고 로그인 정보 넘겨줌 -->
+</body>
+</html>

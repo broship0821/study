@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-String name = request.getParameter("name");
-String tel = request.getParameter("tel");
-%>
 서버페이지
 </body>
 </html>

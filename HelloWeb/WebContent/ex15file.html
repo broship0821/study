@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black" text="gray">
+
+<form action="ex12hello.jsp" enctype="multipart/form-data" method="post">
+	내이름: <input type="text" name="name" /><br><br>
+	보낼 파일명: <input type="file" name="file" /><br><br>
+	<input type="submit" value="서버로이동" />
+	<input type="reset" value="다시작성" />
+</form>
+<!-- 
+multipart/form-data는 전송 data type의 일종으로 
+file 및 image 전송 시 사용, post방식을 사용하며
+이것 안쓰면 전송파일 경로만 서버로 가고 내용은 안간다
+ -->
+
+</body>
+</html>

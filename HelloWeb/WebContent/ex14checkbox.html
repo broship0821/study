@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="ex12hello.jsp" method="get">
+	메일 전송 여부를 결정하세요<br><!-- yes or no -->
+	<input type="checkbox" name="mailhow" checked /><br><br>
+	
+	좋아하는 운동은?<br><br><!-- 다중선택 가능, 같은 항목끼리 같은 name -->
+	<input type="checkbox" name="exercise" value="soccer" />축구<br>
+	<input type="checkbox" name="exercise" value="tennis" />테니스<br>
+	<input type="checkbox" name="exercise" value="golf" />골프<br>
+	<br><br>
+	
+	좋아하는 음식은?<br><br>
+	<input type="checkbox" name="food" value="bread" />빵<br>
+	<input type="checkbox" name="food" value="milk" />우유<br>
+	<input type="checkbox" name="food" value="lamen" />라면<br>
+	<br><br>
+	
+	구매하고 싶은 물품은?<br><!-- 하나만 선택 가능 -->
+	<input type="radio" name="cloth" value="dress" />드레스<br>
+	<input type="radio" name="cloth" value="hill" />구두<br>
+	<input type="radio" name="cloth" value="bag" checked />가방<br>
+	<br><br>
+	
+	기타 의견을 적어주세요<br>
+	<textarea cols="30" rows="10">작성해주세요</textarea>
+	<textarea cols="30" rows="10" onfocus="this.select()">작성해주세요</textarea>
+	<!-- 글자 선택됨 -->
+	<br><br>
+	
+	도시 선택<br><!-- 콤보박스, 하나만 선택 가능 size는 화면에 보여지는 칸 수 -->
+	<select name="select" size="2">
+		<option value="베이징">베이징</option>
+		<option value="서울" selected>서울</option>
+		<option value="도쿄">도쿄</option>
+	</select>
+	<br><br>
+	
+	취미 선택<br><!-- 리스트박스, 다중 선택 가능 multiple이면 size default가 4 -->
+	<select name="select2" multiple>
+		<option value="travel">여행</option>
+		<option value="pingpong">탁구</option>
+		<option value="fish">낚시</option>
+		<option value="soccer">축구</option>
+		<option value="baseball">야구</option>
+	</select>
+	<br><br>
+	<input type="submit" value="서버로 이동" />
+	<input type="reset" value="다시 작성" />
+	
+</form>
+</body>
+</html>
