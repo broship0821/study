@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*display: inline inline-block block*/
+	.disstyle1 ul li{
+		display: inline;
+		/*가로배치,width,height 안됨 margin,padding 좌우간격만 O*/
+	}
+	.disstyle2 ul li{
+		display: inline-block;
+		padding: 50px;
+		margin: 20px;
+		width: 100px;
+		height: 100px;
+		background-color: pink;
+	}
+	/*inline-block은 inline처럼 배치, 그러면서 width,height,margin,padding다 가능*/
+	.disstyle3 ul li{
+		display: block;
+		padding: 10px;
+		margin: 100px;
+		width: 100px;
+		height: 100px;
+		background-color: cyan;
+	}
+
+</style>
+</head>
+<body bgcolor="black" text="gray">
+<div class="disstyle1">
+	<ul>
+		<li><a href="#">여우</a></li>
+		<li><a href="#">기린</a></li>
+	</ul>
+</div>
+<div class="disstyle2">
+	<ul>
+		<li><a href="#">여우2</a></li>
+		<li><a href="#">기린2</a></li>
+	</ul>
+</div>
+<div class="disstyle3">
+	<ul>
+		<li><a href="#">여우3</a></li>
+		<li><a href="#">기린3</a></li>
+	</ul>
+</div>
+<div style="display: none">
+	<ul>
+		<li><a href="#">여우4</a></li>
+		<li><a href="#">기린4</a></li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		font-family: "Comic Sans MS";/*글꼴 순서대로*/
+	}
+	
+	p{
+		font-family: 돋움, 바탕;
+		font-size: 50px;
+	}
+	
+	.shadow{
+		color: #FF0000;
+		text-shadow: 3px 3px 5px #777777;
+		/*글자 그림자: 1.x쪽으로 이동/ 2.y쪽으로 이동/
+		3.blur(번짐: 숫자가 클수록 더 번짐, 10만되도 엄청 번짐)/
+		4.그림자색*/
+	}
+	
+	div{
+		font-size: 50px;
+		width: 1000px;
+		height: 100px;
+		background-color: #FFFF00;
+		box-shadow: 10px 10px 3px #0000FF;
+	}
+</style>
+</head>
+<body>
+<p><span class="shadow">글씨에 그림자 넣기</span></p>
+<div>이번에는 박스에 그림자 넣기</div>
+<br><br><br>
+<div><span class="shadow">둘다 넣어보기</span></div>
+</body>
+</html>

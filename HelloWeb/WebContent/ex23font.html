@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1{
+		color: red;
+		font-family: Serif, 돋움, 바탕, Sans-serif;
+		border: 3px dotted blue;
+		/*경계선두께 경계선디자인 경계선색
+		dashed double groove inset ridge outset solid
+		*/
+		margin: 20px;
+		padding: 100px;
+		text-shadow: 7px 5px 3px #ffff00;
+	}
+	
+	h2{
+		color: red;
+		font-family: Serif, 돋움, 바탕, Sans-serif;
+		border: 3px outset red;
+		border-radius: 20px; /*둥근모서리 정도로 반지름값*/
+		text-shadow: 5px 3px 5px #0000ff;
+	}
+</style>
+</head>
+<body>
+<h1>그냥 글씨</h1>
+<div style="font-weight: 500; font-size: 50px;">
+	50사이즈 글씨
+	<div style="font-weight: bolder; font-style: italic;">굵은 글씨</div>
+	<div style="font-weight: lighter; font-style: italic;">이건뭐지</div>
+</div>
+
+<h2 style="text-align: right">오른쪽 글자 정렬</h2>
+<h2 style="text-align: center">가운데 글자 정렬</h2>
+<h2 style="text-align: left">왼쪽 글자 정렬</h2>
+
+<p style="text-indent: 30pt">[<---이만큼 글자 들여쓰기]</p>
+<p style="text-transform: capitalize;">babo ondal</p><!-- 첫글자만 대문자로 -->
+<p style="text-transform: uppercase;">babo ondal</p>
+<p style="text-transform: lowercase;">BABO onDAL</p>
+
+</body>
+</html>

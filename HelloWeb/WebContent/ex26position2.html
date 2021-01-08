@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+#aa, #bb, #cc{
+	width: 300px;
+	height: 100px;
+	background-color: pink;
+}
+#aa{
+	position: static;
+}
+/* #bb{
+	position: absolute;
+	top: 100px;
+	left: 300px;
+}
+#cc{
+	position: absolute;
+	top: 200px;
+	left: 600px;
+} */
+#bb{
+	position: relative;
+	left: 300px;
+}
+#cc{
+	position: relative;
+	left: 600px;
+}
+</style>
+</head>
+<body>
+<!-- position
+- absolute: 기준점(0,0) 화면 좌상단
+- relative: 상대적인(바로앞 도형 등)
+- static: default 좌->우, 상->하
+- fixed: 고정위치(스크롤을 해도 항상 일정위치에 고정됨)
+
+absolute와 relative 비교 -->
+<div id="aa">안녕하세요1 안녕하세요1 안녕하세요1 안녕하세요1 안녕하세요1</div>
+<div id="bb">안녕하세요2 안녕하세요2 안녕하세요2 안녕하세요2 안녕하세요2</div>
+<div id="cc">안녕하세요3 안녕하세요3 안녕하세요3 안녕하세요3 안녕하세요3</div>
+</body>
+</html>
