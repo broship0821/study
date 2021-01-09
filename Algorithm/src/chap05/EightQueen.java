@@ -5,14 +5,16 @@ public class EightQueen {
 	static boolean[] flag_b = new boolean[15]; //  / 방향으로 퀸을 배치했는지
 	static boolean[] flag_c = new boolean[15]; //  \ 방향으로 퀸을 배치했는지
 	static int[] pos = new int[8]; //각 열의 퀸의 위치
-	static int num = 1;
 
 	//각 열의 퀸의 위치 출력
 	static void print() {
 		for(int i=0;i<8;i++) {
-			System.out.printf("%2d", pos[i]);
+			for(int j=0;j<8;j++) {
+				System.out.printf("%s", pos[i]==j?"■":"□");
+			}
+			System.out.println();
 		}
-		System.out.println();
+		System.out.println("-----------------------");
 	}
 	
 	//i열에 퀸 놓기
@@ -21,7 +23,6 @@ public class EightQueen {
 			if(flag_a[j]==false && flag_b[i+j]==false && flag_c[i-j+7]==false) {
 				pos[i] = j;
 				if(i==7) {
-					System.out.print(num++ + " : ");
 					print();
 				}
 				else {
