@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- html: 틀, 골격, 사람자체
+css: 디자인, 옷
+javascript: 움직임, 동작, 댄스, 축구
+ex) 회원가입: 숫자대신 문자치는 경우 해결하는 js
+특징: 접근할 수 있는 html 태그가 한정된 것이 기본
+<img> <input>에는 접근 가능
+<body> <h1> <div>는 X 
+
+window > document > form > img > input
+
+html은 w3c에서 관장
+js는 ECMA(Europe Computer Manufactor Association)에서 관장 ECMAScript
+
+그래서 자바스크립트는 접근할수 있는 테그가 한정되어 있음
+<img> <input>에는 접근 가능
+<body> <h1> <div>는 X 
+
+모든 태그에 접근하자
+DOMScript document object model
+javascript + DOM = dhtml(Dynamic html)
+
+웹 서비스 개발은 브라우저와 밀접한 관련이 있다. 
+모든 서비스는 사실 브라우저를 바탕으로 실행되기 때문이다. 
+이때 브라우저와 관련된 객체들의 집합을 Browser Object Model 이라고 부른다.
+(DOM은 BOM중 하나이다)
+
+js의 처음 이름은 livescript
+(by netscape navigator 브라우저에서(옛날 브라우저) 실행되도록, 자바문법을 참고하여)
+(참고) mozilla firefox 가 계승함
+
+netscape가 Breden Eich를 영입하여 개발
+
+추후 sun microsystems과 공동으로 개발하면서 javascript로 명명
+
+자바스크립트는 소스코드를 web browser가 해석하여 run 하는 script 언어 ECMA
+
+HTML5에서 사용하는 script language는 자바스크립트
+(참고: VBScript 이런것도 있음(ms가 만듬))
+
+- 자바스크립트의
+장점: 서버의 부하를 줄임(bugs)
+단점: 소스코드가 노출, 보안
+
+자바스크립트 특징: ECMA, ECMAScript
+객체기반언어--객체지향언어(OBL)
+
+<script>태그 사용
+기본적으로 html문서내에 작성되어 실행된다
+(마치 .jsp = html + java)
+즉 html + js
+단 script 내에서의 html문은 js+html
+ex) 
+<body>
+<script>
+	alert("온달");
+	document.write("<h1>온달</h1>");
+</script>
+</body>
+
+프로그래밍에서 동작(동적웹페이지)을 담당 (참고: 정적 웹페이지)
+
+- js 객체종류 3가지
+user defined object(사용자 정의 객체): 정의 생성 사용
+정의: 
+	자바 class Test{}
+	js function Test() {}
+		Test = function() {}
+
+내장객체: (정의) 생성 사용
+Date d = new Date()
+
+브라우저 객체(BOM Browser Object model)
+(정의 생성) 사용
+window.location="http://www.naver.com"
+객체.속성="값"
+
+- 자바스크립트 문법(flecible)
+window.alert()
+대소문자 구분 alert() O ALERT() X
+html은 안가림 <html> O <HTML> O
+
+"" '' 둘다 사용 가능 근데 맞춰줘야됨
+
+; 는 써도되고 안써도됨, 문장연결할때는 무조건 써야됨
+그냥 무조건 쓰기
+
+- 주석은 자바와 같음
+
+- 변수 자료형은 무조건 var
+var aa = 30;
+var aa = "ondal";
+
+- 변수의 자료형은 생략 가능함
+bb = "babo";
+단 기본적으로 var 있으면 지역변수, 없으면 전역변수
+근데 또 function 위에 있는건 전역변수
+그래도 개발할땐 무조건 var 사용하기, 해도 오류는 안난다 라는 것만 기억하기
+
+- 선언위치 및 의미
+var aa; //전역(함수 밖에서 선언)
+function kaja(){
+	aa = 50; //전역
+	var bb = 100; //지역
+}
+
+- 객체 선언
+var aa = {}; //객체
+var bb="tom"; //변수
+
+- 자바스크립트 사용처
+회원가입시 기입내용검증
+이벤트에 대한 동작부분을 담당한다 등등..
+
+- <script>태그 위치
+head, body에서 사용 가능
+<script>가 여러번 나와도 된다
+
+- <script> 사용법
+body에 작성
+head에 작성하고 body에서 call
+.js 파일을 call
+script 없이 html에서 call
+
+
+
+-->
+</body>
+</html>

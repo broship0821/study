@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+html,body {
+	padding: 0px;
+	border: 0px;
+}
+
+header {
+	background-color: yellow;
+	text-align: center;
+	padding: 10px;
+}
+
+div{
+	display: table;
+	width: 100%;
+}
+
+nav {
+	display: table-cell;/*table의 td 만듬, float:left 역활하고 있음*/
+	background-color: pink;
+	width: 20%;
+}
+
+section {
+	display: table-cell;/*nav옆에 td역활, float:right역활*/
+	background-color: orange;
+	width: 70%;
+}
+
+article {
+	margin: 15px;
+}
+
+aside {
+	display: table-cell;
+	background-color: green;
+	width: 10%;
+}
+
+footer {
+	background-color: gray;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+	<!-- Semantic tag 구조
+
+----------------------------------
+			header
+----------------------------------
+nav  		section 		aside
+			article
+			article
+----------------------------------
+			footer
+----------------------------------
+
+Semantic tab(elements)란: teg에 특별한 의미를 지정한 것
+ex) <header></header>는 헤드 부분을 의미하고 헤더 지정시에 사용
+<section></section>: 콘텐츠 부분(h1~h6 제목을 사용),
+	<article></article>: 개별콘텐츠부분(h1~h6 제목을 사용)
+<aside></aside>: 옆면 공간 부분(광고등)
+<footer></footer>: 아래부분(주소등)
+<main></main>: 메인콘텐츠를 의미 -->
+	<header>
+		<h1>과일 주문</h1>
+	</header>
+
+	<div>
+
+		<nav>
+			<h1>메뉴</h1>
+			<ul>
+				<li><a href="#">사과메뉴</a></li>
+				<li><a href="#">배메뉴</a></li>
+				<li><a href="#">감메뉴</a></li>
+			</ul>
+		</nav>
+
+		<section>
+			<h1>과일을 말씀드리면</h1>
+			<article>
+				<h1>맛평가</h1>
+				정말 맛있어요
+			</article>
+			<article>
+				<h1>가격평가</h1>
+				가격이 저렴해요
+			</article>
+		</section>
+
+		<aside>
+			<h5>과수원 광고 방송</h5>
+			<ul>
+				<li><a href="#">가자 방송으로</a></li>
+			</ul>
+		</aside>
+
+	</div>
+
+	<footer>
+		<address>과수원 주소: 서울시</address>
+		<p>전화번호: 010-1234-1234</p>
+		<p>대표자: 홍길동</p>
+	</footer>
+</body>
+</html>

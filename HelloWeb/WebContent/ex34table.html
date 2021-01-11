@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table,tr,td{
+		border: 10px solid green;
+		padding: 30px 20px 10px 5px; /*상우하좌*/
+		margin: 30px;
+	}
+	#aa{
+		/* border-collapse: collapse; */
+		border-collapse: separate;
+		/*table border와 td border 사이 간격 O
+		collapse는 간격 X
+		collapse가 default 인듯*/
+		border-spacing: 20px;
+		margin: 0;
+	}
+</style>
+</head>
+<body>
+	<table id="aa">
+		<tr>
+			<td>아하 그렇구나</td>
+			<td>역시 그렇구나</td>
+		</tr>
+	</table>
+</body>
+</html>
