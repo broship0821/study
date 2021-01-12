@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#one{
+		font-size: 80px;
+		color: red;
+	}
+	#two{
+		font-size: 80px;
+		color: orange;
+	}
+	#three{
+		font-size: 80px;
+		color: yellow;
+	}
+	#four{
+		font-size: 80px;
+		color: green;
+	}
+	#five{
+		font-size: 80px;
+		color: blue;
+	}
+	#six{
+		font-size: 80px;
+		color: purple;
+	}
+</style>
+</head>
+<body>
+<h1>행운의 로또 번호 출력하기</h1>
+<span id="one"></span>
+<span id="two"></span>
+<span id="three"></span>
+<span id="four"></span>
+<span id="five"></span>
+<span id="six"></span>
+<script>
+	let arr = [];
+	for (let i = 0; i < 6; i++) {
+		let num = Math.floor(Math.random()*45)+1;
+		if(arr.indexOf(num)==-1)
+			arr.push(num);
+		else{
+			i--;
+		}
+	}
+	arr.sort(function(a, b) {
+		return a-b;
+	});
+	const id1 = document.querySelector("#one"); //id 숫자 불가
+	const id2 = document.querySelector("#two");
+	const id3 = document.querySelector("#three");
+	const id4 = document.querySelector("#four");
+	const id5 = document.querySelector("#five");
+	const id6 = document.querySelector("#six");
+	id1.innerText = arr[0];
+	id2.innerText = arr[1];
+	id3.innerText = arr[2];
+	id4.innerText = arr[3];
+	id5.innerText = arr[4];
+	id6.innerText = arr[5];
+	
+</script>
+
+</body>
+</html>

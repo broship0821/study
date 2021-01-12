@@ -31,17 +31,34 @@
 		(window - preferences - javascript - editor - ContentAssistant
 				- 중간에 enable auto activation 체크)
 		
+		
+		
+		해봤더니 위에꺼 안됨, new tern 사용하기
+		https://github.com/angelozerr/tern.java/archive/master.zip
+		
+		d 드라이브에 바로 넣고(경로 길면 인식 못할수 있음)
+		help - install new software - add - 이름하나 주고 archive하여 해당 파일 선택
+		파일선택 후 next.. finish
+		
+		tern을 사용하려면 프로젝트마다 마오 - configure - convert to tern project를 선택
+		(체크는 browser 붙은거, completion 붙은거, jQuery 붙은거)
+		
+		체크 다른 방법
+		프로젝트 - 마오 - properties - javasjcript - tern - modules - ...
 		*/
 		
 		/* livescript -> javascript
 		기본적인 체계화
 		window 객체 > document > form > input(img)
 		obp(object based programming) -> oop */
-		window.alert("Hello js");
-		alert("윈도우 생략하고도 가능");
-		//객체중 window만 생략 가능
-		
+		/* window.alert("Hello js");
+		alert("윈도우 생략하고도 가능"); */
+		//객체중 유일하게 window만 생략 가능
 		document.write("js로 글자 작성 방법");
+		/* alert("안녕"+"하세요");
+		alert("안녕","하세요"); */ //문장 더하기는 +로, ,쓰면 안됨
+		
+		document.write("<h1>js로 html 작성하는 법</h1>");
 	</script>
 </body>
 </html>

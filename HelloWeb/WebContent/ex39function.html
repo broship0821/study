@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function test1() {
+	document.write("함수호출문 1형식 <br>");
+}
+function test2(name) {
+	document.write("함수호출문 2형식, 이름: " + name + "<br>");
+}
+function test3(name) {
+	return name + "님과 이길동";
+}
+</script>
+</head>
+<body>
+<script>
+	test1(); //함수호출문 1형식
+	test2("홍길동"); //함수호출문 2형식
+	var name = test3("일길동"); //함수호출문 3형식
+	document.write(name+"님이 입장하셨습니다.");
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>구구단</h1>
+
+<script>
+	document.write("<table border=1>");
+	for(let i=2;i<=9;i++){
+		document.write("<tr><td colspan=2>"+i+" 단</td></tr>");
+		for (let j=1;j<=9;j++) {
+			document.write("<tr><td>"+i+" * "+j+" =</td><td>"+j*i+"</td></tr>");
+		}
+	}
+	document.write("</table>");
+</script>
+
+</body>
+</html>
