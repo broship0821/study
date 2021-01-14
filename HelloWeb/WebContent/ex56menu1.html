@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*큰메뉴 디자인*/
+	.menu1{
+		cursor: pointer; /*손 방식*/
+		color: blue;
+		background-color: pink;
+		font-size: 20px;
+	}
+	.menu2{
+		color: red;
+		background-color: yellow;
+		font-size: 15px;
+	}
+</style>
+<script>
+	function handleMenu(smallmenu) {
+		if(smallmenu.style.display==="none")
+			smallmenu.style.display="block";
+		else
+			smallmenu.style.display="none";
+	}
+	function handleMenu2(smallmenu) {
+		let dd = smallmenu.style.display; //이건 속성을 가져오는것
+		console.log(dd);
+		//js에서 html을 가져와서 변경하고 싶으면은 객체를 가져와야됨
+		//위에 dd는 가져온 객체의 속성을 가져온 것임, 그래서 변경이 안됨
+		//변경하려면 객체 자신을 바꿔야됨 그래서 smallmenu를 바로 써야됨
+		if(smallmenu.style.display==="none")
+			smallmenu.style.display="block";
+		else
+			smallmenu.style.display="none";
+	}
+</script>
+</head>
+<body>
+<!-- 메뉴1 toggle 방식 메뉴 -->
+<div class="menu1" id="bigmenu1" onclick="handleMenu(document.getElementById('smallmenu1'))">
+	CEO
+</div>
+<!-- display:none 숨기기 display:block 숨긴거 보이게 하기 -->
+<div class="menu2" id="smallmenu1" style="display:none">
+	<ul>
+		<li><a href="#">CEO 소개</a></li>
+		<li><a href="#">CEO 인사말</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴2 -->
+<div class="menu1" id="bigmenu2" onclick="handleMenu(document.getElementById('smallmenu2'))">
+	회사소개 및 연혁
+</div>
+<div class="menu2" id="smallmenu2" style="display:none">
+	<ul>
+		<li><a href="#">회사소개</a></li>
+		<li><a href="#">회사연혁</a></li>
+	</ul>
+</div>
+</body>
+</html>

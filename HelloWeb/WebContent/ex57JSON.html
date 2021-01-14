@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//JSON 기법: JavaScript Object Notation (key,value)
+//by Douglas Clockford
+//경량기법으로 자료교환이 가능하게 해줌
+//jQuery + Ajax 할때 JSON이 중요한 역활을 함
+const aa = 30;
+const bb = {}; //객체
+const girl = { //이렇게 표현하는게 JSON임
+	look : "good", //속성:값    key:value
+	heart : "nice",
+	food : function() {
+		alert("먹는속도 빠름");
+	}
+};
+</script>
+</head>
+<body>
+<script>
+	alert(girl.look + " / " + girl.heart); //객체 속성 사용 방법
+	girl.food(); //객체 메소드 사용방법
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html id="htmlid">
+<head id="headid">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function get() {
+		//IE7,8 브라우저에서 사용하는법(비표준)
+		alert("1: "+ document.all.htmlid.nodeName);
+		//document 의 all 의 htmlid id이름을 가진 객체의 태그 이름출력
+		
+		//표준형
+		alert("2: "+ document.getElementById("htmlid").nodeName);
+		
+		const headid = document.getElementById("headid");
+		const tagName = headid.nodeName;
+		alert("3: "+tagName);
+	}
+	
+	function change() {
+		document.getElementById("img").src="img/bb.jpg";
+		const bodyid = document.getElementById("bodyid");
+		bodyid.style.backgroundColor="black";
+		//js에서 css 는 - 빼고 카멜표기법으로 사용
+		bodyid.style.color="gray";
+		bodyid.style.fontSize="70px";
+	}
+</script>
+</head>
+<body id="bodyid">
+DOM을 이용해 접근, 동적변경 하는법
+<input type="button" value="DOM 접근하기" onclick="get();" /><br>
+<img src="img/aa.jpg" alt="그림" id="img" width="200" />
+<input type="button" value="DOM 동적변경하기" onclick="change();" /><br>
+</body>
+</html>

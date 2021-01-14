@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function getInfo() {
+		alert("innerText\n"+document.getElementById("aa").innerText);
+		alert("innerHTML\n"+document.getElementById("aa").innerHTML);//<table> 태그 안나옴
+		alert("outerText\n"+document.getElementById("aa").outerText);
+		alert("outerHTML\n"+document.getElementById("aa").outerHTML);//<table> 태그 나옴
+		alert("textContent\n"+document.getElementById("aa").textContent);//innerText와 똑같으나 디자인X 
+		//inner outter 차이는 해당 아이디가 있는 태그 포함 or 미포함
+		//w3c에서 정식으로 채택한건 innerHTML,outterHTML밖에 없음, 나머지는 비표준
+	}
+</script>
+</head>
+<body>
+<div></div>
+<div></div>
+
+<script>
+alert("윈도우 화면 크기: "+window.screen.width +" x "+ screen.height);
+//화면 정가운데 표현하는 법: (윈도우 화면가로-사진가로)/2 (윈도우 화면세로-사진세로)/2
+//이 좌표로 하면 딱 정가운데 띄어짐
+</script>
+<table id="aa">
+	<tr>
+		<th>Hello</th>
+	</tr>
+	<tr>
+		<th>
+			<h1 onclick="getInfo();">Hello World</h1>
+		</th>
+	</tr>
+</table>
+</body>
+</html>

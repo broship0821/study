@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*큰메뉴 디자인*/
+	.menu1{
+		cursor: pointer; /*손 방식*/
+		color: blue;
+		background-color: pink;
+		font-size: 20px;
+	}
+	.menu2{
+		color: red;
+		background-color: yellow;
+		font-size: 15px;
+	}
+</style>
+
+</head>
+<body>
+<!-- 메뉴1 toggle 방식 메뉴 -->
+<div class="menu1" id="bigmenu1" onclick="handleMenu(document.getElementById('smallmenu1'))">
+	CEO
+</div>
+<!-- display:none 숨기기 display:block 숨긴거 보이게 하기 -->
+<div class="menu2" id="smallmenu1" style="display:none">
+	<ul>
+		<li><a href="#">CEO 소개</a></li>
+		<li><a href="#">CEO 인사말</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴2 -->
+<div class="menu1" id="bigmenu2" onclick="handleMenu(document.getElementById('smallmenu2'))">
+	회사소개 및 연혁
+</div>
+<div class="menu2" id="smallmenu2" style="display:none">
+	<ul>
+		<li><a href="#">회사소개</a></li>
+		<li><a href="#">회사연혁</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴3 -->
+<div class="menu1" id="bigmenu3" onclick="handleMenu(document.getElementById('smallmenu3'))">
+	찾아오시는길
+</div>
+<div class="menu2" id="smallmenu3" style="display:none">
+	<ul>
+		<li><a href="#">회사위치</a></li>
+		<li><a href="#">회사지도</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴4 -->
+<div class="menu1" id="bigmenu4" onclick="handleMenu(document.getElementById('smallmenu4'))">
+	연락처
+</div>
+<div class="menu2" id="smallmenu4" style="display:none">
+	<ul>
+		<li><a href="#">회사전화번호</a></li>
+		<li><a href="#">회사번호</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴5 -->
+<div class="menu1" id="bigmenu5" onclick="handleMenu(document.getElementById('smallmenu5'))">
+	마이페이지
+</div>
+<div class="menu2" id="smallmenu5" style="display:none">
+	<ul>
+		<li><a href="#">회원관리</a></li>
+		<li><a href="#">설정</a></li>
+	</ul>
+</div>
+</body>
+<script>
+	/* //강사님버전 핵노가다
+	function handleMenu(smallmenu) {
+		//일단 전부 닫기, 개수대로 적어놔야됨
+		document.getElementById("smallmenu1").style.display="none";
+		document.getElementById("smallmenu2").style.display="none";
+		document.getElementById("smallmenu3").style.display="none";
+		document.getElementById("smallmenu4").style.display="none";
+		document.getElementById("smallmenu5").style.display="none";
+		
+		//이것만 block 해놓기
+		smallmenu.style.display="block";
+	}
+	 */
+	//for문으로 도전
+	let allMenu = document.querySelectorAll(".menu2");
+	 //와 이게 왜 못가져오나 했더니 스크립트가 위에 있어서 그런거다 인터프리터라 먼저 읽혀서 그런거네
+	function handleMenu(smallmenu) {
+		//일단 전부 닫기
+		allMenu.forEach(menu => menu.style.display="none");
+		smallmenu.style.display="block";
+	}
+</script>
+</html>

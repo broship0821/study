@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function append() {
+		const image = document.createElement("img"); //DOM<img
+		image.setAttribute("src","img/ball.jpg");
+		//image.setAttribute("id", "ball");
+		image.setAttribute("class", "ball");
+		document.form1.appendChild(image);
+		//append1이 실행되면 src,class 속성이 추가된 img 태그가 생성됨
+	}
+	function remove() {
+		/* const ball = document.getElementById("ball");
+		if(ball){//일단 ball이 class가 있냐?
+			ball.parentNode.removeChild(document.getElementById("ball"));
+			//ball.parentNode.removeChild(ball);
+			//지울때는 형제간에는 지울 수 없음, 꼭 부모로 가서 지워야됨
+		} */
+		const ball = document.querySelector(".ball");
+		if(ball){//일단 ball이 class가 있냐?
+			ball.parentNode.removeChild(ball);
+			//ball.parentNode.removeChild(ball);
+			//지울때는 형제간에는 지울 수 없음, 꼭 부모로 가서 지워야됨
+		}
+		//get..byid는 되고 get..byclass로 하니까 htmlinnerArray?로받아와서 안된다
+		//querySelector로는 잘된다 아마 검색된것 중 가장 첫번째꺼만 가져와서 인듯
+		const ball2 = document.querySelectorAll(".ball");
+		//Array.from(ball2).forEach(b=>console.log(b));
+		ball2.forEach(b=>console.log(b));
+	}
+</script>
+</head>
+<body>
+<form name="form1">
+	<img src="img/ball.jpg" onclick="append();" />
+	<img src="img/fish.jpg" onclick="remove();" />
+</form>
+</body>
+</html>

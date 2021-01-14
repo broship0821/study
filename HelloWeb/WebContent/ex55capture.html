@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function ebbu() {
+		alert("이~뻐");
+	}
+	function mut() {
+		alert("멋");
+	}
+	function sa() {
+		alert("사");
+	}
+	/* function cancel() {
+		if(event.stopPropagation)
+			event.stopPropagation();//이것만 써도됨
+		else
+			event.cancelBubble = true;//IE 7,8버전일때는 이렇게 버블링 막아야됨
+	} */
+</script>
+</head>
+<body>
+<script>
+	document.addEventListener("click", function() {
+		alert("capture 방법")
+	}, true);//true: capture 사용했다 이 메소드 제일 먼저 실행하고 그다음 자기 자신 실행, default는 false 그럼 자기자신 제일먼저 실행
+	document.onclick=ebbu
+</script>
+<div onclick="mut();">나야 나~~</div>
+<div onclick="mut();">
+	<span onclick="sa();cancel();">신상입은 나야나~</span>
+</div>
+<!-- 가장 자식 태그부터 버블처럼 올라가면서 부모 태그 실행됨
+sa -> mut -> ebbu 식으로 됨 -->
+</body>
+</html>

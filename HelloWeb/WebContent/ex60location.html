@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="setTimeout('changeURL()', 2000);">
+
+</body>
+<script>
+	//window.onload=function(){
+	//	setTimeout("changeURL()", 1000);//1초 있다가 changeURL() 실행
+	//}
+	function changeURL() {
+		//객체명.메소드() reload됨 다시 처음부터 올림, 그래서 뒤로가기 없음
+		//location.replace("https://www.naver.com");//뒤로버튼 없음
+		
+		//이거하면 뒤로가기 있다는대 난 없음
+		location.href="https://www.naver.com";
+		
+		//href 는 히스토리를 담고 replace는 히스토리 안담고 간데... 그렇데...
+		
+		//객체명.속성 
+		//window.location="https://www.naver.com";
+	}
+</script>
+</html>
