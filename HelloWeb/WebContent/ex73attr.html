@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<img src="img/aa.jpg" width="200" id="img1" />
+<img src="img/bb.jpg" width="200" id="img2" />
+<h1 align="left">align align align </h1>
+<h1 align="left">change align align align </h1>
+</body>
+<script>
+	$("#img2").css("height", 400); //css 추가
+	$("#img1").attr("height", 200); //attr: setAttribute 속성 추가
+	$("#img1").attr("alt", "사진이 안보임");
+	
+	
+	console.log($("h1:first").attr("align"));
+	$("h1:last").click(function() {
+		$(this).attr("align","right");
+	});
+</script>
+</html>

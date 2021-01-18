@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 외부 지도 스트립트 파일 불러오기
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=여기 키값"> -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2d794fe8cee4722958c5c8ed181ace67"></script>
+</head>
+<body>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12640.52759909224!2d127.05762114077244!3d37.62258507218324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbbc3f101a689%3A0x2b29f34713ec5e7!2z7ISc7Jq47Yq567OE7IucIOuFuOybkOq1rCDsm5Tqs4Qz64-ZIOuniOuTpOuhnA!5e0!3m2!1sko!2skr!4v1610709406115!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<!-- 
+카카오맵 키발급 설명
+http://apis.map.daum.net/web/guide/
+
+발급을 위한 순서
+1. https://developers.kakao.com 가서 회원가입
+2. 내 애플리케이션 - "애플리케이션 추가하기" 클릭
+3. 계속 진행
+4. 아이콘 상관없이 이름 넣고 [앱만들기]로 키 발급받음
+5. 발급된 자바스크립트키 확인(자바스크립트키가 app키)
+2d794fe8cee4722958c5c8ed181ace67
+6. 플랫폼 - 플랫폼설정
+7. 웹을 선택 - 도메인은 http://localhost:8080 후 (url 2개 등록 가능)
+- [추가] 버튼 (이거 꼭 등록해야됨)
+ -->
+<h1>나의 위치</h1>
+<h3>위도와 경도</h3>
+<h3>지도 나오기</h3>
+<div id="jido1" style="width:700px; height:700px;">
+	여기에 지도 나옴
+</div>
+</body>
+<script>
+function showMap(latitude, longitude) {
+	const joongang = new daum.maps.LatLng(latitude,longitude);
+	
+	const mapDesign = {
+			zoom:15,
+			center: joongang,
+			mapTypeId: daum.maps.MapTypeId.ROADMAP
+	};
+	
+	const map = new daum.maps.Map(document.getElementById("jido1"), mapDesign);
+}
+function getCoords() {
+	//위도 경도 찾기
+	if(navigator.geolocation){//지도
+		navigator.geolocation.getCurrentPosition(myPlace);
+	}
+}
+function myPlace(position) {
+	const latitude = position.coords.latitude;
+	const longitude = position.coords.longitude;
+	alert("위도: "+latitude+", 경도: "+longitude);
+	showMap(latitude, longitude);
+}
+window.onload = function() {
+	getCoords();
+	
+}
+
+</script>
+</html>

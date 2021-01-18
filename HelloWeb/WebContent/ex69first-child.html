@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<h1>식사메뉴</h1>
+<div class="f1">
+	<p>식사 메뉴</p>
+	<ol id="s1" class="s1">
+		<li>백반</li>
+		<li>돈까스</li>
+		<li class="my">햄버거</li>
+	</ol>
+	<p>후식 메뉴</p>
+	<ul id="h1" class="h1">
+		<li>커피</li>
+		<li>와플</li>
+		<li>팥빙수</li>
+		<li>초콜렛</li>
+		<li>베라</li>
+		<li>도낫</li>
+		<li>붕어빵</li>
+	</ul>
+</div>
+</body>
+<script>
+	console.log($("#h1 li:first").text());
+	console.log(document.querySelector(".h1").childNodes[1].textContent);
+	//parent -child를 사용하여 커피 출력
+	console.log($("#h1 li:first-child").text()); //첫번째 자식
+	//n번째로 따지기 5th 6th 7th... 할때 nth
+	console.log($("#h1 li:nth-child(1)").text()); //첫번째 자식
+	//홀수만 출력하기
+	console.log($("#h1 li:nth-child(2n-1)").text());
+	//짝수만 출력하기
+	console.log($("#h1 li:nth-child(2n)").text());
+	//eq는 0부터 시작함
+	console.log($("#h1 li:eq(0)").text());
+	//lt: less than <
+	console.log($("#h1 li:lt(3)").text());
+	//gt: greater than >
+	console.log($("#h1 li:gt(3)").text());
+</script>
+</html>

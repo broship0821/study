@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	<table class="table">
+		<tr><td>일길동</td><td>벌겅</td></tr>
+		<tr><td>이길동</td><td>퍼렁</td></tr>
+		<tr><td>삼길동</td><td>주황</td></tr>
+		<tr><td>일길동</td><td>벌겅</td></tr>
+		<tr><td>이길동</td><td>퍼렁</td></tr>
+		<tr><td>삼길동</td><td>주황</td></tr>
+		<tr><td>일길동</td><td>벌겅</td></tr>
+		<tr><td>이길동</td><td>퍼렁</td></tr>
+		<tr><td>삼길동</td><td>주황</td></tr>
+	</table>
+</body>
+<script>
+	//1:1 2:4 3:7 4:10
+	$('.table tr:nth-child(3n-2)').css('background','red');//그냥 background만 써도 되네
+	$('.table tr:nth-child(3n-1)').css('background','blue');
+	$('.table tr:nth-child(3n)').css('background','orange');
+</script>
+</html>

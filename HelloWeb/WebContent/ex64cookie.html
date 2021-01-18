@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="orange">
+<pre>
+	본문이 들어가는 자리
+	본문이 들어가는 자리
+</pre>
+</body>
+<script>
+	window.onload = function() {
+		//                          쿠키명=쿠키값
+		if(document.cookie.indexOf("myCookie=ad1")===-1){//이런쿠키가 없으면
+			window.open("ex64.html","cookieWin2",
+			"width=370,height=300,top=20,left=350,location=no,menubar=0");
+		}
+		
+		alert("쿠키확인: "+document.cookie);
+	}
+</script>
+</html>

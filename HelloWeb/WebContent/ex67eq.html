@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<h1>식사메뉴</h1>
+<div class="f1">
+	<p>식사 메뉴</p>
+	<ol id="s1" class="s1">
+		<li>백반</li>
+		<li>돈까스</li>
+		<li class="my">햄버거</li>
+	</ol>
+	<p>후식 메뉴</p>
+	<ul id="h1" class="h1">
+		<li>커피</li>
+		<li>와플</li>
+		<li>팥빙수</li>
+	</ul>
+</div>
+</body>
+<script>
+	//자식 표현할떈 그냥 띄어쓰기
+	console.log($("#s1 li:eq(1)").text()); //그냥 text()면 text 불러오기
+	console.log($("ol li:eq(2)").text()); 
+	console.log($(".s1 li:eq(0)").text()); 
+	console.log($("body .h1 li:eq(0)").text());
+	//총 li 개수 얻기: 6
+	console.log($("li").length);
+	console.log($("li, p, ol").length); //이땐 , 로 구분
+	//css 바꾸는 방법
+	$(".s1").css("color","red");
+</script>
+</html>

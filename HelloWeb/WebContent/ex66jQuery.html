@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<!-- 
+jQuery: client-side  javascript framework 자바스크립트를 짧게 씀
+
+design pattern: 이렇게 해보니까 쉽고 정확하게 진행되더라
+그러면 이것들을 취합해서 이론적으로 정립해보자
+
+(참고) jQuery Mobile
+- web app (hybrid app)
+어플만들때 안드로이드 studio - 자바 => native app
+
+John Resig이 작성 자바스크립트를 라이브러리로 만들어 놓고 갖다 쓰자
+
+이전 문법
+prototype.js -> script.aculo.us(scriptaculous.js) -> dojo.js -> jQuery
+
+사용방법:
+jquery.js 파일을 import 해서 사용
+url을 직접 기술하여 사용(다운로드X)
+ 
+다운방법:
+jquery.com
+다운로드 클릭
+Download the compressed, production jQuery 3.5.1
+Download the uncompressed, development jQuery 3.5.1
+우클릭 - 다른이름으로 링크 저장
+ -->
+<h1> jQuery </h1>
+<div id="div1" class="d"></div>
+<div id="div2" class="d">
+	<ul>
+		<li id="li3" class="d">바보</li>
+		<li id="li4" class="d">온달</li>
+	</ul>
+	<ul>
+		<li id="li5" class="d">멋지다</li>
+		<li id="li3" class="d">멋지다</li>
+	</ul>
+</div>
+</body>
+<script>
+	/* 
+	//jQuery
+	$(document).ready(function() {
+		alert("바보");
+	});
+	//javascript 제이쿼리보다 우선순위 높음
+	window.onload = function() {
+		alert("그냥 공주");//onload는 제일 마지막껏만 실행됨
+		console.log("onload1111");
+	};
+	window.onload = function() {
+		alert("평강 공주");
+		console.log("onload2222");
+	};
+	//jQuery 줄여서 사용하는 방법
+	$(function() {
+		alert("바보222");
+	});
+	$(function() {
+		alert("온달222");
+	});
+	$(function() {
+		alert("평강공주222");
+	}); 
+	*/
+	
+	$(function() {
+		//div 태그중 #div1 id면 text를 이렇게 넣기
+		$("div").filter("#div1").text("바보 온달의 러브라인..."); //set innerText
+		$("div").find("#li3").text("평강공주"); //find라 하나만 변경되는게 아니라 id여서 하나만 변경되는듯
+		$("div").find("#li4").html("<h3>바보온달</h3>"); //innerHTML
+		$("div").find("#li5").text("결혼한다네");
+		//체이닝 기법, .end()를 써서 $("#div2")에 .find를 두번 연속 사용 가능
+		$("#div2").find("#li3").text("평강").end().find("#li4").text("공주");
+		
+		//find, filter 차이:
+		//$("div").filter("#li3").text("뭐야"); //에러남
+		//$("div").filter(".d").text("뭐야"); //div 태그만 검사, 자기 자신만 검사
+		$("div").find(".d").text("뭐야"); //div 태그 및 하위태그 검사, 자기 자신과 하위까지 포함함
+	});
+	
+</script>
+</html>

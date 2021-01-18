@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div>
+		<h2 class="d1">25</h2>
+	</div>
+	<div>
+		<h2 class="d2">4</h2>
+	</div>
+	<div>
+		<h2 class="d3">0</h2>
+	</div>
+</body>
+<script>
+
+	let x=1, y=1;
+	
+	//jquery
+	/* $(".d1").click(function() {//onClick
+		x = $(this).text(); //방금일어난 이벤트의 text를 가져와라?
+	});
+	$(".d2").click(function() {
+		y = $(this).text();
+	});
+	$(".d3").click(function() {
+		$(this).text(x*y);
+	}); */
+
+
+	//javascript
+	document.querySelector(".d1").addEventListener("click", function(event) {
+		x = event.target.textContent;
+	});
+	document.querySelector(".d2").addEventListener("click", function(event) {
+		y = event.target.textContent;
+	});
+	document.querySelector(".d3").addEventListener("click", function(event) {
+		event.target.textContent = x*y;
+	});
+</script>
+</html>

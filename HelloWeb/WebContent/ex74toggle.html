@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<input value="화면변경" type="button" class="btn" />
+</body>
+<script>
+	$(".btn").click(function(event) {
+		$("body").toggle(400, function() {
+			console.log("d");
+		})
+	});
+</script>
+</html>

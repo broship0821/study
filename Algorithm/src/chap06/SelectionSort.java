@@ -21,10 +21,31 @@ public class SelectionSort {
 		}
 	}
 	
+	static void selectionSortDetail(int[] a, int n) {
+		for(int i=0;i<n-1;i++) {
+			int min = i;
+			for(int j=i+1;j<n;j++) {
+				if(a[j]<a[min])
+					min = j;
+			}
+			//바꿀요소위에는 * 가장 작은 요소위에는 +
+			for(int j=0;j<n;j++) {
+				System.out.printf("%2s", (j==i)?"*":j==min?"+":" ");
+			}
+			System.out.println();
+			//배열 출력
+			for(int j=0;j<n;j++) {
+				System.out.printf("%2d", a[j]);
+			}
+			System.out.println();
+			swap(a, i, min);
+		}
+	}
+	
 	public static void main(String[] args) {
-		int[] a = {6,4,3,7,1,9,8};
+		int[] a = {6,4,8,3,1,9,7};
 		System.out.println(Arrays.toString(a));
-		selectionSort(a, a.length);
+		selectionSortDetail(a, a.length);
 		System.out.println(Arrays.toString(a));
 
 	}

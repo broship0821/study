@@ -15,9 +15,9 @@
 크롬에서 네이버 띄우고 쿠키찾기
 F12 - application(안보이면 상단>>확장누름) - storage - cookie
 
-*** 쿠키 만들기
 
-쿠키 작성 전 팝업창 띄우기 (그런다음 쿠키설정)
+
+*** 쿠키 작성 전 팝업창 띄우기 (그런다음 쿠키설정)
 window.open("popupWin.html","popupWin1",
 "width=370,height=300,top=20,left=350,location=no,menubar=0");
 
@@ -30,6 +30,32 @@ window.open()메소드
 location=no -> 주소표시줄 안보이게 하기 근데 크롬에선 보안상 no 해도 뜸
 menubar 안보이게 하기)
 
+근데 이 방법은 url이 보여서 잘 안씀
+url안보이게 팝업창 띄우는 방법은 div태그 만들어서 position: absolute 하고 
+visibility: visible 하고 닫침 버튼 누를때 visible을 hidden으로 바꿔주면됨
+예)
+style="position: absolute;left: 30px;top: 10px;visibility: visible; z-index: 2;">
+	<table width="300" height="100"
+function closePopUp(event) {
+		event.target.parentNode.style.visibility="hidden";
+}
+여기서 z-index는 클수록 화면에 먼저 보여짐
+
+
+*** cookie 스토리
+작은 파일, 광고
+클라이언트 접속을 하면 쿠키를 생성 - 클라이언트로 전송 - 클라이언트에 저장
+
+<자바스크립트 쿠키구조> (자바도 비슷, 근데 js로 쓰지 잘 안씀 addCookie)
+document.cookie="쿠키이름=쿠키값;유효기간;도메인;경로명;secure"
+document.cookie="aa=bb;expires= ;domain= ;path= ;secure"
+
+name=value;expires=
+
+path: 생성한 페이지에서만 cookie read
+	/ 로 되있으면 www.aa.com/ 이하의 모든 페이지에서 read 가능
+
+secure: https로 안전한 전송
  -->
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="background-color: orange;">
+<h3>pop up 창 뜨게하기</h3>
+<pre>
+	<h2>
+	여기는 메인창
+		팝업창이 이렇게 열리는구나
+		팝업창이 이렇게 열리는구나
+		팝업창이 이렇게 열리는구나
+	팝업창 여는건 결국 window.open() 메소드 사용해야됨
+	</h2>
+</pre>
+</body>
+<script>
+ 	window.onload = function() {
+		window.open("ex62.html","popupWin1",
+"width=370,height=300,top=20,left=350,location=no,menubar=0");
+	}
+</script>
+</html>

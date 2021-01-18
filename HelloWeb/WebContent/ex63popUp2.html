@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="orange">
+메인 내용 적는 부분1<br>
+메인 내용 적는 부분2<br>
+메인 내용 적는 부분3<br>
+
+<!-- popup부분,  z-index 가 클수록 앞에뜸
+ position: absolute; 한다음 visibility: visible; 후 닫칠때 visible을 hidden으로-->
+<div class="p1" 
+style="position: absolute;left: 30px;top: 10px;visibility: visible; z-index: 2;">
+	<table width="300" height="100">
+		<tr>
+			<td style="border: 2px #0000ff solid" bgcolor="pink">
+				html안에 있는 팝업 사용하는 방법111<br>
+				이 창을 닫으면 hidden이됨1111<br>
+				url없이 팝업창 사용하는법1111
+			</td>
+		</tr>
+	</table>
+	<input type="button" value="닫기" onclick="closePopUp(event);" />
+</div>
+<div class="p1" 
+style="position: absolute;left: 30px;top: 10px;visibility: visible; z-index: 1;">
+	<table width="300" height="100">
+		<tr>
+			<td style="border: 2px #0000ff solid" bgcolor="pink">
+				html안에 있는 팝업 사용하는 방법2222<br>
+				이 창을 닫으면 hidden이됨2222<br>
+				url없이 팝업창 사용하는법2222
+			</td>
+		</tr>
+	</table>
+	<input type="button" value="닫기" onclick="closePopUp(event);" />
+</div>
+
+메인 내용 적는 부분4<br>
+메인 내용 적는 부분5<br>
+메인 내용 적는 부분6<br>
+</body>
+<script>
+	function closePopUp(event) {
+		event.target.parentNode.style.visibility="hidden";
+	}
+</script>
+</html>
