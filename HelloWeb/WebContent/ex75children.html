@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<h1>식사메뉴</h1>
+<div class="f1">
+	<p>식사 메뉴</p>
+	<ol id="s1" class="s1">
+		<li>백반</li>
+		<li>돈까스</li>
+		<li class="my">햄버거</li>
+	</ol>
+	<p>후식 메뉴</p>
+	<ul id="h1" class="h1">
+		<li>커피</li>
+		<li>와플</li>
+		<li>팥빙수</li>
+		<li>초콜렛</li>
+		<li>베라</li>
+		<li>도낫</li>
+		<li>붕어빵</li>
+	</ul>
+</div>
+</body>
+<script>
+	console.log($("#h1").children().length);
+	//일렬로 출력
+	console.log($("#h1").children().text()); //자식 다 출력
+	//한줄씩 출력
+	console.log($("#h1").append().text());
+	console.log($("#h1").contents().text());
+	console.log($("#h1").text());
+	//children 중 첫번째 자식
+	console.log($("#h1").children(":first").text());
+	//children 중 두번째 자식
+	console.log($("#h1").children(":first").next().text());
+	console.log($("#h1").children(":eq(0)").next().text());
+	console.log($("#h1 li:eq(0)").next().text());
+	//두번째부터 끝까지
+	console.log($("#h1 li:eq(0)").nextAll().text());
+	//부모와 그 자식 다 출력
+	console.log($("#h1").parent().text());
+	
+	//그 전 요소 출력 next 반대
+	console.log($("#h1 li:eq(1)").prev().text());
+	//그 전 요소 모두 출력 역순으로 됨
+	console.log($("#h1 li:eq(3)").prevAll().text());
+	
+	// 형제 접근 siblings
+	console.log($("#h1 li").siblings().length);
+	//0번째 형제들의 배경색을 핑크로 변경
+	$("#h1 li:eq(0)").siblings().css("background", "pink");
+	$("#h1 li:eq(1)").siblings().css("background", "yellow");
+</script>
+</html>

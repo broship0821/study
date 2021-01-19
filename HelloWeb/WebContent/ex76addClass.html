@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+<style>
+	.fSize1{
+		font-size: 50px;
+	}
+</style>
+</head>
+<body>
+	<h1>맛집메뉴</h1>
+	<div id="d1">
+		<ul id="ul1" class="ul1">
+			<li id="1"><b>불백</b></li>
+			<li id="2">햄버거</li>
+			<li id="3">피자</li>
+		</ul>
+	</div>
+	<div id="d2">
+		<ul id="ul2" class="ul2">
+			<li id="11">김치전</li>
+			<li id="22">파전</li>
+			<li id="33">녹두전</li>
+		</ul>
+	</div>
+	<div id="d3">
+		<ul id="ul3" class="ul3">
+			<li id="100">회덮밥</li>
+			<li id="200">냉면</li>
+			<li id="300">왕만두</li>
+		</ul>
+	</div>
+	<div>
+		<img src="img/menu1.jpg" id="menu1" width="100" />
+		<img src="img/menu2.jpg" id="menu2" width="100" />
+		<img src="img/menu3.jpg" id="menu3" width="100" />
+	</div>
+</body>
+<script>
+	$("#d2").find("#11").addClass("fSize1"); //fSize1이라는 class 추가, 위에 style에서 설정함
+	$("#d2").find("#22").html("두부전");
+	$("#d3").find("#100").html("<h2 style='color:red;'>회냉면</h2>");
+	$("#menu1").height("20");
+	$("#menu2").height("200");
+	$("#menu3").height("20");
+</script>
+</html>

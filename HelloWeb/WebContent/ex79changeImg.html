@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div>
+		<img src="img/menu1.jpg" width="100" class="img1" />
+		<img src="img/menu2.jpg" width="100" class="img2" />
+		<!-- 절대경로는 프로젝트명 쓰고 WebContent는 빼고 -->
+		<img src="/HelloWeb/img/menu3.jpg" width="100" class="img3" />
+	</div>
+	<input type="button" id="stop" value="stop" />
+</body>
+<script>
+	const interval = setInterval(function() {
+		$($("div").children(":first")).appendTo("div");
+	}, 3000);
+	
+	$("#stop").click(function() {
+		clearInterval(interval);
+	})
+</script>
+</html>
