@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<div id="first">
+	<h1>먹고싶은 과일 선택</h1>
+</div>
+
+<div id="second">
+	<select name="" id="select_box">
+		<option value="사과">사과</option>
+		<option value="메론">메론</option>
+		<option value="바나나" selected="selected">바나나</option>
+		<option value="오렌지">오렌지</option>
+	</select>
+</div>
+</body>
+<script>
+	//hover 로 함수 두개 넣은거랑 .mouseenter .mouseleave 한거랑 똑같은 효과임
+	$("#first").mouseenter(function() {
+		$("#second").slideDown('slow');
+		$("#first").hide();
+	}).mouseleave(function() {
+		//암것도 실행 X
+	});
+	
+	$("#second").mouseenter(function() {
+		//암것도 실행 X
+	}).mouseleave(function() {
+		$("#second").hide();
+		$("#first").show();
+	});
+</script>
+</html>

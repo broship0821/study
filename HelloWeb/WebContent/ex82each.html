@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+<style>
+	.fSize1{
+		font-size: 50px;
+	}
+</style>
+</head>
+<body>
+	<h1>맛집메뉴</h1>
+	<div id="d1">
+		<ul id="ul1" class="ul1">
+			<li id="1"><b>불백</b></li>
+			<li id="2">햄버거</li>
+			<li id="3">피자</li>
+		</ul>
+	</div>
+	<div id="d2">
+		<ul id="ul2" class="ul2">
+			<li id="11">김치전</li>
+			<li id="22">파전</li>
+			<li id="33">녹두전</li>
+		</ul>
+	</div>
+	<div id="d3">
+		<ul id="ul3" class="ul3">
+			<li id="100">회덮밥</li>
+			<li id="200">냉면</li>
+			<li id="300">왕만두</li>
+		</ul>
+	</div>
+</body>
+<script>
+	//모든 li 파란색으로 바꾸기
+	//$("div").css("color","blue");
+	//첫번쨰 인자는 i++, 하나씩 증가함, 두번째 인자는 하나하나의 내용
+	$('li').each(function(index,content) {// i, arr[i]
+		//$(this).css('color','blue');
+		$(content).css('color','blue');
+		console.log(index); //0, 1, 2 .... 인덱스 처럼 사용 가능함
+		console.log(content); //첫번째 li, 두번째 li... 내용 사용 가능
+	});
+</script>
+</html>

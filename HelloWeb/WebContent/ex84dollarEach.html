@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	바디
+</body>
+<script>
+	const urlArr = [
+		{key:'네이버', value:'https://www.naver.com'},
+		{key:'다음', value:'https://www.daum.net'}
+	];
+	//   반복문 돌 배열,      인덱스, 값
+	$.each(urlArr, function(i, elt) {
+		const str = "<a href='"+ elt.value + "'>"
+		+ "<h1>" + elt.key + "</h1></a><br>";
+		
+		document.body.innerHTML += str;
+	});
+</script>
+</html>

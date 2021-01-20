@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+<style>
+	/*큰메뉴 디자인*/
+	.menu1{
+		cursor: pointer; /*손 방식*/
+		color: blue;
+		background-color: pink;
+		font-size: 20px;
+	}
+	.menu2{
+		color: red;
+		background-color: yellow;
+		font-size: 15px;
+	}
+</style>
+
+</head>
+<body>
+<!-- 메뉴1 toggle 방식 메뉴 -->
+<div class="menu1" id="bigmenu1">
+	CEO
+</div>
+<!-- display:none 숨기기 display:block 숨긴거 보이게 하기 -->
+<div class="menu2" id="smallmenu1" style="display:none">
+	<ul>
+		<li><a href="#">CEO 소개</a></li>
+		<li><a href="#">CEO 인사말</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴2 -->
+<div class="menu1" id="bigmenu2">
+	회사소개 및 연혁
+</div>
+<div class="menu2" id="smallmenu2" style="display:none">
+	<ul>
+		<li><a href="#">회사소개</a></li>
+		<li><a href="#">회사연혁</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴3 -->
+<div class="menu1" id="bigmenu3">
+	찾아오시는길
+</div>
+<div class="menu2" id="smallmenu3" style="display:none">
+	<ul>
+		<li><a href="#">회사위치</a></li>
+		<li><a href="#">회사지도</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴4 -->
+<div class="menu1" id="bigmenu4">
+	연락처
+</div>
+<div class="menu2" id="smallmenu4" style="display:none">
+	<ul>
+		<li><a href="#">회사전화번호</a></li>
+		<li><a href="#">회사번호</a></li>
+	</ul>
+</div>
+
+<!-- 메뉴5 -->
+<div class="menu1" id="bigmenu5">
+	마이페이지
+</div>
+<div class="menu2" id="smallmenu5" style="display:none">
+	<ul>
+		<li><a href="#">회원관리</a></li>
+		<li><a href="#">설정</a></li>
+	</ul>
+</div>
+</body>
+<script>
+	/*
+	toggle
+	.is(":hidden")  hidden이냐?
+	.is(":visible") 보여지냐?(block냐?)
+	.show     visible 로 바꿔라
+	.hide     hidden 으로 바꿔라
+	*/
+	/* $.each(nums, function(i, elt) {
+		$('#bigmenu'+elt).click(function() {
+			if($('#smallmenu'+elt).is(':hidden')) //hiden이냐?
+				$('#smallmenu'+elt).show();
+			else //show 상태냐?
+				$('#smallmenu'+elt).hide();
+		});
+	}); */
+	//show hide 안써도 쉽게 사용 가능
+	const nums = [1,2,3,4,5];
+	$.each(nums, function(i, elt) {
+		$('#bigmenu'+elt).click(function() {
+			$('#smallmenu'+elt).toggle();
+		});
+	});
+	
+</script>
+</html>

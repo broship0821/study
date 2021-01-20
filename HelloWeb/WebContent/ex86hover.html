@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	<h1>여기에 마우스를 가져와바</h1>
+	<h2>222여기에 마우스를 가져와바2222</h2>
+	<h3>3333여기에 마우스를 가져와바3333</h3>
+	<h4>444444여기에 마우스를 가져와바444444</h4>
+	<h5>55555555여기에 마우스를 가져와바55555555</h5>
+</body>
+<script>
+	$("h1").hover(function() { //첫번째 함수는 마우스가 들어올때
+		$(this).css("background", "pink");
+	}, function() { //두번째 함수는 마우스가 떠날때
+		$(this).css("background", "white");		
+	});
+	
+	//hover에 함수 하나만 쓰면 mouseover 와 같은 효과
+	$("h2").hover(function() {
+		$(this).css("background", "pink");
+	});
+	$("h3").mouseover(function() {
+		$(this).css("background", "pink");
+	});
+	//mouseenter도 똑같음
+	$("h4").mouseenter(function() {
+		$(this).css("background", "pink");
+	});
+</script>
+</html>

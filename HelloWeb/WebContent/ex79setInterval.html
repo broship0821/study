@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div>
+		<img src="img/menu1.jpg" width="100" class="img" />
+		<img src="img/menu2.jpg" width="100" class="img" />
+		<!-- 절대경로는 프로젝트명 쓰고 WebContent는 빼고 -->
+		<img src="/HelloWeb/img/menu3.jpg" width="100" class="img" />
+	</div>
+	<input type="button" id="stop" value="stop" />
+</body>
+<script>
+	//jquery로 짠거
+	/* const interval = setInterval(function() {
+		//$($("div").children(":first")).appendTo("div");
+		$("img").first().appendTo("div");
+	}, 3000);
+	
+	$("#stop").click(function() {
+		clearInterval(interval);
+	}) */
+	
+	//바닐라 js로 짠거
+	const interval = setInterval(function() {
+		const img = document.querySelector(".img");
+		document.querySelector("div").appendChild(img);
+	}, 3000);
+	
+	document.querySelector("#stop").addEventListener("click", function() {
+		clearInterval(interval);
+	});
+</script>
+</html>
