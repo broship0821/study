@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>소설읽기</h3><hr>
+<textarea id="ta" cols="100" rows="20"></textarea><br />
+<input type="button" value="소설읽기" onclick="kajaServer();" />
+
+</body>
+<script>
+	//우선 자바스크립트로 ajax 구현하기
+	let xhr1 = null;
+
+	function getXHR() {//xhr함수(통신객체 생성하기)
+		try {
+			//크로스 브라우징
+			if(window.XMLHttpRequest) //표준형, ie11,파폭,크롬 등
+				return new XMLHttpRequest; //xhr 통신 객체 생성
+			else if (window.ActiveXObject) //ie 5 이하
+				return new ActiveXObject("MSXML2.XMLHTTP");
+			else //ie 7,8
+				return new ActiveXObject("Microsoft.XMLHTTP");
+		} catch (e) {
+			return null;
+		}
+	}
+	
+	function kajaServer() {//서버로 가는 함수
+		xhr1 = getXHR(); //xhr 객체 생성됨
+		//onreadystatechange: 상태가 바뀔때마다
+		xhr1.onreadystatechange = callback1;//이 위치를 기억하고 있다가 반복됨
+		xhr1.open("get", "ajaxText.txt", true); //get방식, 이위치로, 비동기
+		xhr1.send(null);
+	}
+	
+	function callback1() {
+		const ta = document.getElementById("ta");
+		switch (xhr1.readyState) { //현재 상태가 어떻게 되니
+		
+		case 4:
+			//ta.value += "결과 다 나옴\n";
+			//다 받고 나서도 오류가 있는지 체크해야됨
+			if(xhr1.status===200){
+				//ta.value += "에러 없이 정상적으로 잘 도착\n";
+				ta.value += xhr1.responseText + "\n" //responseXML
+				/*
+				<food><name>사과</name><price>2500</price><food>
+				xml은 구조적,체계적이므로 전송데이터로 사용(혹은 환경설정),
+				단 xml은 html형식으로 변환
+				*/
+			}
+			else {
+				console.log(xhr1.statusText);
+				ta.value += "404 에러가 발생했습니다.\n";
+				//              에러넘버                                    에러내용
+				ta.value += xhr1.status + "\t" + xhr1.statusText + "\n";				
+			}
+			break;
+		}
+	}
+	
+	function kajaClear() {
+		const ta = document.getElementById("ta");
+		ta.value = "";
+	}
+</script>
+</html>

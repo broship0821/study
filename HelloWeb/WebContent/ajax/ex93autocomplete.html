@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery.js"></script>
+<script src="./jquery.autocomplete.js"></script>
+<script>
+	const loveline = [
+		"apple", "banana","orange","watermelon","mango",
+		"원피스","나루토","블리치","진격의거인","데스노트", "귀멸의칼날",
+		"조커","올드보이","어벤져스","터미네이터","트랜스포머","캐리비안의해적",
+		"오이1","오이2","어이","오이3","하이"
+	];
+</script>
+</head>
+<body>
+<script>
+	for (const ll in loveline) {
+		document.write(loveline[ll]+" ");
+	};
+	document.write("\n");
+	
+	$(function() {
+		//첫글자만 검색
+		$("#loveLine").autocomplete(loveline);
+		//글자 포함되면 다 찾기
+		$("#loveLine").autocomplete(loveline,{matchContains: true});
+	});
+</script>
+<form>
+	러브라인 이름:
+	<input type="text" name="lLine" id="loveLine" />
+</form>
+</body>
+</html>

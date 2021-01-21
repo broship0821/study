@@ -81,11 +81,14 @@
 
         <div class="card card-outline-secondary my-4">
           <div class="card-header">
-            Product Reviews
+          	  게시글
           </div>
           <div class="card-body">
-            <pre>1. 필요한 테이블 만들기, 데이터 몇개 집어넣기
+            <pre>
+            1. 필요한 테이블 만들기, 데이터 몇개 집어넣기 (완)
             2. c:forEach 로 목록 기능 구현하기
+            - dao 만들기
+            - 컨트롤러로 불러오기
             </pre>
             <small class="text-muted">Posted by 작성자 on 작성일자</small>
             <hr>

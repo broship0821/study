@@ -20,11 +20,30 @@ public class Partition {
 				swap(a, pl++, pr--);
 		} while (pl<=pr);
 		
+		System.out.println("피벗: "+x);
+		
+		System.out.println("피벗 이하 그룹(왼쪽)");
+		for(int i=0;i<pl;i++)
+			System.out.print(a[i]+" ");
+		System.out.println();
+		
+		if(pl>pr+1) {
+			System.out.println("피벗과 일치하는 그룹");
+			for(int i=pr+1;i<pl;i++)
+				System.out.print(a[i]+" ");
+			System.out.println();
+		}
+		
+		System.out.println("피벗 이상 그룹(오른쪽)");
+		for(int i=pr+1;i<n;i++)
+			System.out.print(a[i]+" ");
+		System.out.println();
 		
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int[] arr = {1,2,3,4,5,6,7,8,9};
+		partition(arr, arr.length);
 
 	}
 
