@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+</head>
+<body>
+<h3>Ajax responseXML</h3><br /><br />
+text 대신 xml을 받아서 출력해보기
+<br /><br />
+<div id="result"></div>
+</body>
+<script>
+	$.ajax({
+		url: "menu.jsp",
+		data: {
+			name: "test",
+			age: 19
+		},
+		type: "get",
+		
+		success: function(data1) {
+			console.log(data1);
+			$(data1).find("menu").each(function() {
+				const t1 = $(this).find("title").text();
+				const p1 = $(this).find("price").text();
+				const s1 = $(this).find("result").text();
+				$("<h3></h3>").text(t1+" "+p1+" "+s1).appendTo("#result");
+			});
+		},
+		error: function(xhr, status) {
+			console.log(xhr.status);
+			
+		}
+	});
+</script>
+</html>

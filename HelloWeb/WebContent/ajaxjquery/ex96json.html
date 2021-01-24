@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+</head>
+<body>
+<h3>Ajax JSON</h3>
+앞으로 data교환에서 json 자주 만나게 될것임<br />
+json 알아보기<br />
+<input type="button" value="test" onclick="test();" />
+<br />
+<div id="result"></div>
+</body>
+<script>
+	function test() {
+		$.getJSON("json.jsp", function(data1) {
+			$.each(data1, function(name1, value1) {//i, arr[i]
+				$("<h3></h3>").text(value1.title+" "+value1.price+" "+value1.evaluation).appendTo("div");
+			});
+		});
+		
+	};
+</script>
+</html>

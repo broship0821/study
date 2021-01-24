@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 현재 프론트 디스패쳐를 스프링이 만들게 web.xml에 적어놨음 /* 로 설정해서 모든 url을 프론트 디스패쳐를 걸쳐가게 
+	해놈 거쳐갈때 어느 pojo 컨트롤러에 매핑시킬지 설정해주는 것이 지금 이 dispatcher-servlet.xml 파일임 보통 이름을 
+	...-servlet.xml 이라고 지음 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       https://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- <context:component-scan
+		base-package="com.broship.peter.web"></context:component-scan> -->
+
+	<!-- id는 요청될 url, 해당 url이 오면 클래스에 적혀있는 컨트롤러 실행 -->
+	<bean id="/index.do" class="com.broship.peter.web.board.IndexController" >
+		<property name="dao" ref="dao"></property>
+	</bean>
+
+	<!-- ViewResolver 클래스 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- 정적요청이 들어오면 /static/ 이 위치에서부터 찾기 시작해라, 그럼 static이 루트가 됨 -->
+	<mvc:resources location="/static/" mapping="/**"></mvc:resources>
+
+	<!-- spring-jdbc를 위한 DataSource -->
+	<context:property-placeholder
+		location="classpath:config/database.properties" />
+	<!-- 위에  database.properties 이 파일은 resource 폴더 안에 있어야되네, 경로명은 저렇게 쓰고-->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<!-- jdbcTemplate -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- spring dao -->
+	<bean id="dao" class="com.broship.peter.web.board.impl.BoardDAOSpring">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
+</beans>
