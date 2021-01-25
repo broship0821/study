@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>request</title>
+</head>
+<body>
+<h1>로그인</h1>
+<form action="kajaLogin.jsp" method="post">
+	아이디 <input type="text" name="id" required="required" /><br />
+	비밀번호 <input type="password" name="pw" required="required" /><br />
+	나이 <input type="number" name="age" required="required" /><br />
+	<input type="submit" value="로그인" />
+	<input type="reset" value="다시작성" />
+</form>
+<!-- 
+#. get, post
+get 	head/body 중 head로 전송, 전송 내용이 다 출력됨
+		주소?name=value&name=value.... 이런식
+		전송시 영어는 그대로 전송, 한글 등 특수문자는 %3% 인코딩되서 전송
+		보안문제에 관계없는 경우 사용
+		고정길이방식: 128~2k, 길이 계산X, 상대적으로 속도가 빠름
+		보내는 양이 비교적 적을때
+		default 가 get
+
+post 	head/body 중 body로 전송, 보안성이 강함
+		고정길이가 없으니 길이계산함, 비교적 속도가 느림
+		
+#. error
+error 404 file not found  파일 못찾음
+	  500 internal server error   서버 문제
+	  
+#. input 에 작성한 내용은 꼭 한글로 처리를 해줘야됨
+post 방식은 한글에 대해 문장으로 처리가 가능
+request.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8");
+get 방식에서 한글 깨질경우:(utf-8로해서 그런가 이거 해도 안깨짐)
+톰캣 - server.xml
+63라인쯤 <Connector> 태그에 URIEncoding="UTF-8" 이거 넣어줌
+63라인: connectionTimeout="20000" port="8080" 이거 있는 라인
+ -->
+</body>
+</html>

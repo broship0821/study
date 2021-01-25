@@ -13,12 +13,12 @@
        http://www.springframework.org/schema/context 
        http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<!-- <context:component-scan
-		base-package="com.broship.peter.web"></context:component-scan> -->
+	<context:component-scan
+		base-package="com.broship.peter.web"></context:component-scan>
 
 	<!-- id는 요청될 url, 해당 url이 오면 클래스에 적혀있는 컨트롤러 실행 -->
 	<bean id="/index.do" class="com.broship.peter.web.board.IndexController" >
-		<property name="dao" ref="dao"></property>
+		<!-- <property name="dao" ref="dao"></property> -->
 	</bean>
 
 	<!-- ViewResolver 클래스 -->
@@ -51,7 +51,6 @@
 	
 	<!-- spring dao -->
 	<bean id="dao" class="com.broship.peter.web.board.impl.BoardDAOSpring">
-		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
 </beans>

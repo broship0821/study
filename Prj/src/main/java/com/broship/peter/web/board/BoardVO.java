@@ -19,7 +19,7 @@ public class BoardVO {
 	private String title;
 	private String writer;
 	private String content;
-	private Date regDate;
+	private Date regdate;
 	private int hit;
 	private String ip;
 	private int hidden;
@@ -50,11 +50,11 @@ public class BoardVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Date getRegDate() {
-		return regDate;
+	public Date getRegdate() {
+		return regdate;
 	}
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
 	}
 	public int getHit() {
 		return hit;

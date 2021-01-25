@@ -62,7 +62,10 @@ comment(--) 주석, declaration(!) 선언, expression(=) 표현식, scriptlet, d
  <h2>구구단 5단</h2>
  <%
  	for(int j=1;j<=9;j++){
- 		out.println("5 X " + j + " = " + 5*j + "<br>");
+ %>
+ 		5 X <%=j %> = <%=j*5 %><br>
+ 		
+ <%
  	}
  %>
  

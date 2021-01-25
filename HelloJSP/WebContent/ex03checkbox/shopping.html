@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="shoppingAction.jsp" method="post">
+	<table border="2" width="500">
+		<tr><td>제품종류번호 선택</td></tr>
+		<tr>
+			<td>
+				<select name="select" size="1">
+					<option value="100-최신상품">100-최신상품</option>
+					<option value="200-할인상품">200-할인상품</option>
+					<option value="300-매장진열상품">300-매장진열상품</option>
+				</select>
+			</td>
+		</tr>
+		<tr><td>제품 선택</td></tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="product" value="구두" />구두<br>
+				<input type="checkbox" name="product" value="옷" />옷<br>
+				<input type="checkbox" name="product" value="가방" />가방<br>
+				<input type="checkbox" name="product" value="악세서리" />악세서리<br>
+				<input type="checkbox" name="product" value="무선이어폰" />무선이어폰<br>
+				<input type="checkbox" name="product" value="패딩" />패딩<br>
+			</td>
+		</tr>
+		<tr><td>구입 방법</td></tr>
+		<tr>
+			<td>
+				<input type="radio" name="payment" value="카드" />카드<br>
+				<input type="radio" name="payment" value="현금" />현금<br>
+				<input type="radio" name="payment" value="상품권" />상품권<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" value="구입" />
+				<input type="reset" value="취소" />
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

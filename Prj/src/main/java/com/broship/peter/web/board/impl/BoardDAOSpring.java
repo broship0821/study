@@ -8,15 +8,15 @@ import org.springframework.stereotype.Repository;
 
 import com.broship.peter.web.board.BoardVO;
 
-
+@Repository
 public class BoardDAOSpring {
-	
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	private final String BOARD_LIST = "select * from board1 order by seq desc";
 	
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
+//	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+//		this.jdbcTemplate = jdbcTemplate;
+//	}
 
 
 	public List<BoardVO> getBoardList(){

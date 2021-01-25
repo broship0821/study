@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,25 +85,11 @@
           	  게시글
           </div>
           <div class="card-body">
-            <pre>
-            1. 필요한 테이블 만들기, 데이터 몇개 집어넣기 (완)
-            2. c:forEach 로 목록 기능 구현하기
-            - dao 만들기
-            - 컨트롤러로 불러오기(완)
-            
-            
-            ${list[0].getTitle()}
-			위에 내용이 있다면 성공!
-			이걸 바로 쓸수있는거 보니까 포워딩 방식으로 보내지나 보다
-            </pre>
-            <small class="text-muted">Posted by 작성자 on 작성일자</small>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-            <hr>
+            <c:forEach var="n" items="${list}">
+	            <p>${n.content}</p>
+	            <small class="text-muted">Posted by ${n.writer} on ${n.regdate}</small>
+	            <hr>
+            </c:forEach>
             <a href="#" class="btn btn-success">Leave a Review</a>
           </div>
         </div>
