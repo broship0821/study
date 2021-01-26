@@ -93,6 +93,11 @@ public class IntSet {
 	}
 	
 	public String toString() {
-		return Arrays.toString(set);
+		//return Arrays.toString(set); //이러면 남은 공간은 다 0으로 표시됨
+		StringBuffer tmp = new StringBuffer("{ ");
+		for(int i=0;i<num;i++)
+			tmp.append(set[i] + " ");
+		tmp.append("}");
+		return tmp.toString();
 	}
 }
