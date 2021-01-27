@@ -17,6 +17,21 @@ public class IntSet {
 		}
 	}
 	
+	//공집합인지 확인
+	public boolean isEmpty() {
+		return (num==0)?true:false;
+	}
+	
+	//집합이 가득 찼는지 확인
+	public boolean isFull() {
+		return (num==max)?true:false;
+	}
+	
+	//집합 초기화
+	public void clear() {
+		num = 0;
+	}
+	
 	public int capacity() {
 		return max;
 	}
@@ -90,6 +105,33 @@ public class IntSet {
 		copyFrom(s1);//먼저 this에 s1 복사해옴
 		for(int i=0;i<s2.num;i++)
 			add(s2.set[i]);//s1에 없는것만 s2에서 복사해옴
+	}
+	
+	//지금 set에 s 더하기(합집합 구하기)
+	public void add(IntSet s) {
+		for(int i=0;i<s.num;i++)
+			add(s.set[i]);
+	}
+	
+	//교집합 구하기
+	public void retain(IntSet s) {
+		for(int i=0;i<num;i++) {
+			System.out.println(num);
+			if(!s.contains(set[i])) {//없으면 삭제
+				remove(set[i]);
+			}
+		}
+	}
+	
+	// 집합 s와 차집합
+	public boolean remove(IntSet s) {
+		boolean flag = false;
+		for (int i = 0; i < num; i++)
+			if (s.contains(set[i]) == true) {
+				remove(set[i]);
+				flag = true;
+			}
+		return flag;
 	}
 	
 	public String toString() {

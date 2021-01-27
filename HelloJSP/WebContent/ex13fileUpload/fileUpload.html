@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+db 연결을 위해선 ojdbc.jar가 필요하듯
+파일 업로드를 위해선 cos.jar 필요
+
+###. 다운로드 및 설치:
+- http://servlets.com/cos/ 에서
+밑에 cos-20.08.zip 다운 후 압축풀기
+lib 폴더 안에 cos.jar 파일 복사
+
+/WebContent/WEB-INF/lib/ 안에 넣는다(웹에서 .jar 파일은 여기다 넣음)
+프로젝트 클릭 후 F5(새로고침)
+
+upload 전에 d: 에 upload 폴더를 하나 만든다 (서버저장소)
+
+바탕화면에 올릴파일 하나 (aa.jpg) 를 준비한다 (업로드할 파일)
+
+사용자 바탕화면에 있는 aa.jpg를 서버의 "d 드라이브 upload 폴더"(d:/upload)에 올리는것
+
+ -->
+<h1>file upload</h1>
+<form action="uploadToServer.jsp" method="post" enctype="multipart/form-data">
+	<!-- cos.jar의 multipart
+	jsp에 기본적으로 파일 올리는 것이 없음, 그래서 외부 라이브러리인 cos.jar를 사용하겠다는 뜻
+	cos.jar에 설정되 있는게 multipart -->
+	이름: <input type="text" name="name" /><br />
+	파일: <input type="file" name="file1" /><br />
+	파일: <input type="file" name="file2" /><br />
+	파일: <input type="file" name="file3" /><br />
+	<input type="submit" value="파일 업로드" /><br />
+	<input type="reset" value="재작성" />
+</form>
+</body>
+</html>

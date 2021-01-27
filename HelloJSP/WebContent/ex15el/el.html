@@ -1,0 +1,31 @@
+<!-- 
+	el(Expression Language) 사용
+	${value} -> <%=value%>
+	
+	action tag, useBean, el 등은
+	가능한 자바 문법 사용을 줄이기 위한 목적(가독성문제)
+	
+	parsing이 간단해져서 비교적 속도 빠름
+	아주 복잡한 경우는 표현이 어려움
+	
+	#. el이 사용되는 이유
+	xml, json : 데이터교환(자료를 규칙있게 표현해야)
+	
+	xml:
+	<food>
+		<title>사과</title>
+		<price>3000</price>
+	</food>
+	
+	json:
+		title:"사과",
+		price:3000
+		
+	yaml(.yml)
+	title:
+		사과
+	price:
+		3000
+		
+	<% %> 이런 기호가 점점 안보이게 됨
+ -->
