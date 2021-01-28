@@ -134,6 +134,53 @@ public class IntSet {
 		return flag;
 	}
 	
+	//집합 s의 부분집합인지 체크
+	public boolean isSubsetOf(IntSet s) {
+		for(int i=0;i<num;i++) {
+			if(!s.contains(set[i])) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	//집합 s의 진부분집합인지 체크
+	public boolean inProperSubsetOf(IntSet s) {
+		//부분집합인지?
+		if(!isSubsetOf(s)) {
+			return false; //부분집합이 아니면 집부분집합도 아님
+		}
+		//두개가 똑같은지?
+		if(!equalTo(s)) {
+			return false;
+		}
+		return true;
+		/* 요소수만 체크하고 부분집합인지 체크하면 됬었음
+		 if (num >= s.num) // 요솟수가 s 이상이면
+			return false; // s의 진부분집합이 아님
+		return s.isSubsetOf(s);
+		 */
+	}
+	
+	public void intersectionOf(IntSet s1, IntSet s2) {
+		//먼저 비우고 시작
+		clear();
+		for(int i=0;i<s1.num;i++) {
+			if(s2.contains(s1.set[i])) {
+				add(s1.set[i]);
+			}
+		}
+	}
+	
+	public void differenceOf(IntSet s1, IntSet s2) {
+		clear();
+		for(int i=0;i<s1.num;i++) {
+			if(!s2.contains(s1.set[i])) {
+				add(s1.set[i]);
+			}
+		}
+	}
+	
 	public String toString() {
 		//return Arrays.toString(set); //이러면 남은 공간은 다 0으로 표시됨
 		StringBuffer tmp = new StringBuffer("{ ");

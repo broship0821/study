@@ -38,6 +38,8 @@
 	}
 %>
 <br><br>
-<a href="index.html">더 구매하시겠습니까?</a>
+<a href="index.html">더 구매하시겠습니까?</a><br><br><br>
+<a href="reset.jsp">[모두 취소]</a><br><br><br>
+<a href="pay.jsp">결제하러가기</a><br>
 </body>
 </html>
