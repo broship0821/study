@@ -1,0 +1,29 @@
+<서블릿>
+
+- applet 과 servlet
+
+*applet : 
+정적인 웹페이지가 아닌 동적인 웹페이지를 위해 자바로 작성한 small program으로
+client side에서 실행됨, 지금은 잘 사용하지 않음
+
+*servlet :
+서블릿은 client side 인 applet의 문제점을 해결하는 방식으로 
+server side server program (자바)
+
+JSP -> 자바 -> .class
+
+MVC2 모델에서 컨트롤러의 역활을 담당
+
+presentation layer(logic) : view(jsp)
+
+business layer : 계산 등 역활을 수행하는 Controller (servlet)
+
+
+
+
+servlet 사용할 프로젝트는 무조건 web.xml 추가해야됨
+
+servlet은 패키지가 두단계 이상이여야만 읽혀짐
+
+com.companyname.... 이런식으로하기
+중복 안시킬려는 목적이 있음

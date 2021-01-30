@@ -7,10 +7,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>수정할 이름 선택</title>
 </head>
 <body>
-<h1>삭제할 이름 선택</h1>
+<h1>수정할 이름 선택</h1>
 <%
 	request.setCharacterEncoding("utf-8");
 	TelInfoDAO tidao = new TelInfoDAO();
@@ -29,7 +29,7 @@
 		<tr>
 			<td><%=imsi.getId() %></td>
 			<td>
-				<a href="SawonDeleteForm.jsp?name=<%= imsi.getName() %>">
+				<a href="SawonUpdateForm.jsp?name=<%= imsi.getName() %>">
 					<%=imsi.getName() %>
 				</a>
 			</td>
