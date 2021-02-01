@@ -20,12 +20,23 @@
 	<bean id="/index.do" class="com.broship.peter.web.board.IndexController" >
 		<!-- <property name="dao" ref="dao"></property> -->
 	</bean>
+	<bean id="/board.do" class="com.broship.peter.web.board.BoardController" ></bean>
 
+	<!-- 타일즈 ViewResolver 클래스 -->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="1" />
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" value="/WEB-INF/tiles.xml" />
+	</bean>
 	<!-- ViewResolver 클래스 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/"></property>
 		<property name="suffix" value=".jsp"></property>
+		<property name="order" value="2" />
 	</bean>
 
 	<!-- 정적요청이 들어오면 /static/ 이 위치에서부터 찾기 시작해라, 그럼 static이 루트가 됨 -->
