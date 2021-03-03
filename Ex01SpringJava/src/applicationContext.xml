@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- Bangka1 b1 = new Bangka1(); -->
 	<bean id="b1" class="com.google.bangka.Bangka1" />
+	<bean id="b3" class="com.google.bangka.Bangka1" />
 	<bean id="b2" class="com.google.bangka.Bangka2" />
+	
+	<bean id="b4" class="com.google.bangka.Bangka2" scope="prototype" />
+	
+	<!-- 사원 -->
+	<bean id="s1" class="com.google.hello.Sawon" />
+	<bean id="s2" class="com.google.hello.Sawon" />
 	
 </beans>

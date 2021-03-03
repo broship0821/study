@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+	<!-- 애노테이션으로 aop 설정하기 -->
+	<aop:aspectj-autoproxy />
+
+	<bean name="securityBean" class="com.google.aop.Security" />
+	<bean name="helloProcessBean" class="com.google.aop.HelloProcess" />
+	
+	<!-- xml로 aop 설정하는 방법 -->
+	<!-- within 사용 -->
+<!-- 	<aop:config>
+		<aop:aspect id="securityAspect" ref="securityBean">
+			within(com.google.aop.HelloProcess): HelloProcess클래스 안의 모든 메소드 실행때
+			<aop:pointcut expression="within(com.google.aop.HelloProcess)" id="secuPoint"/>
+			secuPoint 라는 시점(포인트컷) before에 실행될 goSecurity메소드
+			실제 advice가 적용될수 있는 많은 joinpoint중  secuPoint는 실제 실행되는 pointcut이 됨
+			<aop:before pointcut-ref="secuPoint" method="goSecurity"/>
+		</aop:aspect>
+	</aop:config> -->
+
+</beans>
