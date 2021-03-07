@@ -2,7 +2,7 @@ package 구현;
 
 import java.util.Scanner;
 
-public class B1476_2 {
+public class B1475_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String input = sc.next();

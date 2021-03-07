@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -23,7 +24,15 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@PostMapping(value="/moya.do")
+	@PostMapping("/moyamoya.do")
+	public String kaja2(Model model, @RequestParam(value="name",defaultValue="")String specialName) {
+		if(specialName.equals("")||specialName==null)
+			return "error/kajaError";
+		model.addAttribute("name",specialName);
+		return "kaja";
+	}
+	
+	@PostMapping("/moya.do")
 	public String kaja(Model model, String name) {
 		model.addAttribute("name",name);
 		return "kaja";

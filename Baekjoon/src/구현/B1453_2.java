@@ -3,7 +3,7 @@ package 구현;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class B1454_2 {
+public class B1453_2 {
 
 	public static void main(String[] args) {
 		boolean[] check = new boolean[101];
