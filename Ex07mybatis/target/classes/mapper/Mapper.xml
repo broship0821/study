@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.empmanage.sawon.service.dao.SawonDAO"><!-- 매핑될 dao 인터페이스 풀네임 작성 -->
+	<select id="getAllSawon" resultType="sawonVO">
+		SELECT id, name, tel
+		FROM teltable55
+	</select>
+	<select id="getTelinfo" resultType="sawonVO">
+		SELECT id, name, tel
+		FROM teltable55
+		WHERE id = #{id}
+	</select>
+	<insert id="insertSawon" parameterType="sawonVO">
+		INSERT INTO teltable55
+		VALUES(#{id},#{name},#{tel})
+	</insert>
+	<update id="updateSawon" parameterType="sawonVO">
+		UPDATE teltable55
+		SET name=#{name}, tel=#{tel}
+		WHERE id=#{id}
+	</update>
+	<delete id="deleteSawon">
+		DELETE FROM teltable55
+		WHERE id=#{id}
+	</delete>
+</mapper>
